@@ -1,8 +1,8 @@
 @props(['class' => ''])
 
 <img {{ $attributes->merge(['class' => $class]) }} />
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>'
 
-<?xml version="1.0" encoding="UTF-8"?>
 <svg id="chokan" data-name="chokan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 498.63 473.59" width="100"
     height="100">
     <defs>
