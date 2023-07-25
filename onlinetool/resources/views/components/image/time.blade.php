@@ -1,7 +1,8 @@
 @props(['class' => ''])
 
 <img {{ $attributes->merge(['class' => $class]) }} />
-<?xml version="1.0" encoding="UTF-8"?>
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>'
+{{-- <?xml version="1.0" encoding="UTF-8"?> --}}
 <svg id="time" data-name="time" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 445.99 369.04" width="100"
     height="100">
     <defs>
