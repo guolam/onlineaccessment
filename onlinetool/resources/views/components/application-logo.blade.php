@@ -1,4 +1,4 @@
-<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>'
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 <svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244.9 291.32" {{ $attributes }}>
     <defs>
         <style>

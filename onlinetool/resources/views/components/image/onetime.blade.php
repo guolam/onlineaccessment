@@ -2,7 +2,7 @@
 
 <img {{ $attributes->merge(['class' => $class]) }} />
 
-<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>'
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 <svg id="_onetime" data-name="onetime" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 369.6 364.25" width="100"
     height="100">
     <defs>
