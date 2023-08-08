@@ -13,11 +13,10 @@ return new class extends Migration
   {
     Schema::create('answers', function (Blueprint $table) {
       $table->id();
-      $table->unsignedBigInteger('user_id');
-      $table->text('answer_content'); // 回答の内容（テキストカラムとして仮定）
+      $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+      $table->string('question_id');
+      $table->string('attribute_id');
       $table->timestamps();
-
-      $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
     });
   }
 

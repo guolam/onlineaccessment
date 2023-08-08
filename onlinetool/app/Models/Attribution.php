@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Answer extends Model
+class Attribution extends Model
 {
 
   protected $fillable = [
-    'user_id',
-    'question_id',
-    'attribute',
+    'id',
+    'content',
   ];
 }

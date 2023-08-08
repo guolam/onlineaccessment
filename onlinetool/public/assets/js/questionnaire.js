@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { value: "4", class: "option-D" },
         { value: "5", class: "option-E" }
       ],
-      name: "que-1",
-      attribute: "Problemsolving"
+      name: "que-{{ $question->id }}",
+      attribution: "Problemsolving"
     },
 
     {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { value: "4", class: "option-D" },
         { value: "5", class: "option-E" }
       ],
-      name: "que-2",
+      name: "que-{{ $question->id }}",
       attribute: "Problemsolving"
     },
 
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { value: "4", class: "option-D" },
         { value: "5", class: "option-E" }
       ],
-      name: "que-3",
+      name: "que-{{ $question->id }}",
       attribute: "Problemsolving"
     },
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { value: "4", class: "option-D" },
         { value: "5", class: "option-E" }
       ],
-      name: "que-4",
+      name: "que-{{ $question->id }}",
       attribute: "Problemsolving"
     },
 
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-5",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
 
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-6",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
     // {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-7",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
     // {
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-8",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
     // {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-9",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
     // {
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-10",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
     // {
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-11",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
     // {
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-12",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
     // {
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-13",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
     // {
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-14",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
     // {
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-15",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Problemsolving"
     // },
     // {
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-16",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-17",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-18",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-19",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-20",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -254,21 +254,10 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-21",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
-    // {
-    //   content: "慣れていないことに取り組むのが苦手な方だ",
-    //   options: [
-    //     { value: "1", class: "option-A" },
-    //     { value: "2", class: "option-B" },
-    //     { value: "3", class: "option-C" },
-    //     { value: "4", class: "option-D" },
-    //     { value: "5", class: "option-E" }
-    //   ],
-    //   name: "que-21",
-    //   attribute: "Resilience"
-    // },
+    //
     // {
     //   content: "新たなことに取り組むのは少し億劫だ",
     //   options: [
@@ -278,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-22",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -290,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-23",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -302,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-24",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -314,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-25",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -326,7 +315,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-26",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -338,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-27",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -350,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-28",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -362,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-29",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -374,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-30",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -386,7 +375,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-31",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -398,7 +387,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-32",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -410,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-33",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -422,7 +411,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-34",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -434,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-35",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -446,7 +435,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-36",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Resilience"
     // },
     // {
@@ -458,8 +447,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-37",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "望ましくない状況の要因を考慮し、解決方法を考えた",
@@ -470,8 +459,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-38",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "問題の背後にある原因を探り出すために努力した",
@@ -482,8 +471,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-39",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "状況を振り返りながら、その経緯を理解しようとした",
@@ -494,8 +483,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-40",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "状況を理解するために情報を収集したり調査したりした",
@@ -506,8 +495,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-41",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "行動計画を立てる前に問題の要素を分析し、優先順位を決めた",
@@ -518,8 +507,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-42",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "自分がやるべきことを考え出した",
@@ -530,8 +519,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-43",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "動するための計画を練った",
@@ -542,8 +531,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-44",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "問題に向き合って適切な対策を考案した",
@@ -554,8 +543,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-45",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "問題の本質を捉えて、どうやって解決できるかを考えた",
@@ -566,8 +555,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-46",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "解決への道筋を考慮して具体的なアイデアを出した",
@@ -578,8 +567,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-47",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "問題解決の結果に基づいて将来の展開を考慮した",
@@ -590,8 +579,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-48",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "自分の感情について考えながら行動することを意識した",
@@ -602,8 +591,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-49",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "自分のやりたいことを考えてみた",
@@ -614,8 +603,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-50",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "自分の将来について見通しを持とうと考えた",
@@ -626,8 +615,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-51",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "自分が将来どうなっていたいかを考えた",
@@ -638,8 +627,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-52",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "その問題について、他の人の意見やアドバイスを聞いてみた",
@@ -650,8 +639,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-53",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "ニュースや雑誌などを通じて、その問題に関する情報を入手した",
@@ -662,8 +651,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-54",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "問題の所在を明確にするために、様々な調査を行った",
@@ -674,8 +663,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-55",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "その問題について他の人に相談した",
@@ -686,8 +675,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-56",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "共通の経験を持つ人に話を聞いてみて参考にした",
@@ -698,8 +687,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-57",
-    //   attribute: "problemfocus"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Problemfocus"
     // },
     // {
     //   content: "将来の目標や計画をある程度描いている",
@@ -710,8 +699,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-58",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "自分の将来を考えて、現在から準備を進めている",
@@ -722,8 +711,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-59",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "将来達成したい目標を持っている",
@@ -734,8 +723,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-60",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "将来の方向性が明確に定まっていなくて、漠然としている",
@@ -746,8 +735,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-61",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "将来のことを思い描くことにあまり興味がない",
@@ -758,8 +747,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-62",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "将来に向けて期待感や希望を抱いている",
@@ -770,8 +759,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-63",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "10年後の自分の姿については、今のところ具体的なイメージが持てない",
@@ -782,8 +771,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-64",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "自分の将来は、自分の力で築いていけると信じている",
@@ -794,8 +783,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-65",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "自分の将来について不安や不確かさを感じている",
@@ -806,8 +795,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-66",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "毎日の生活が充実していて、満足している",
@@ -818,8 +807,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-67",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "今の生活には満足しており、幸せを感じている",
@@ -830,8 +819,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-68",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "毎日のルーティンが同じで、ワンパターンな感じで退屈している",
@@ -842,8 +831,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-69",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "毎日が何気なく過ぎていく感じがする",
@@ -854,8 +843,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-70",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "現在の自分が、本来の自分とは違うような気がしている",
@@ -866,8 +855,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-71",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "過去の自分を肯定し、受け入れることができる自信がある",
@@ -878,8 +867,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-72",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "過去の出来事を思い出すことが、あまり好きではない",
@@ -890,8 +879,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-73",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "過去の経験は苦しいものが多く、辛い思い出ばかりが残っている",
@@ -902,8 +891,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-74",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "過去の出来事について、なかなか忘れられずに引きずっている",
@@ -914,8 +903,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-75",
-    //   attribute: "timeperspective"
+    //   name: "que-{{ $question->id }}",
+    //   attribute: "Timeperspective"
     // },
     // {
     //   content: "自分ならではの個性を重要視している",
@@ -926,7 +915,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-76",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -938,7 +927,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-77",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -950,7 +939,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-78",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -962,7 +951,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-79",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -974,7 +963,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-80",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -986,7 +975,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-81",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -998,7 +987,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-82",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1010,7 +999,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-83",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
 
     // },
@@ -1023,7 +1012,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-84",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1035,7 +1024,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-85",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1047,7 +1036,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-86",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1059,7 +1048,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-87",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1071,7 +1060,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-88",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1083,7 +1072,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-89",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1095,8 +1084,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-90",
-    //   attribute: "Selfesteem"
+    //   name: "que-{{ $question->id }}",    //   attribute: "Selfesteem"
     // },
     // {
     //   content: "自分が好きなことに時間を使い、それを楽しんでいる",
@@ -1107,7 +1095,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-91",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1119,7 +1107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-92",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1131,7 +1119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-93",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1143,7 +1131,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-94",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1155,7 +1143,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-95",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1167,7 +1155,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-96",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1179,7 +1167,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-97",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1191,7 +1179,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-98",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1203,7 +1191,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-99",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1215,7 +1203,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-100",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1227,7 +1215,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-101",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1239,7 +1227,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-102",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1251,7 +1239,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-103",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1263,7 +1251,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-104",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1275,7 +1263,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-105",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1287,7 +1275,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-106",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1299,7 +1287,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-107",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1311,7 +1299,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-108",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1323,7 +1311,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-109",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1335,7 +1323,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-110",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1347,7 +1335,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-111",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1359,7 +1347,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-112",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfesteem"
     // },
     // {
@@ -1371,7 +1359,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-113",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1383,7 +1371,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-114",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1395,7 +1383,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-115",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1407,7 +1395,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-116",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1419,7 +1407,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-117",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1431,7 +1419,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-118",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1443,7 +1431,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-119",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1455,7 +1443,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-120",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1467,7 +1455,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-121",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1479,7 +1467,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-122",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1491,7 +1479,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-123",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1503,7 +1491,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-124",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1515,7 +1503,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-125",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1527,7 +1515,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-126",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1539,7 +1527,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-127",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1551,7 +1539,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-128",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1563,7 +1551,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-129",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1575,7 +1563,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-130",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1587,7 +1575,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-131",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1599,7 +1587,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-132",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1611,7 +1599,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-133",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1623,7 +1611,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-134",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1635,7 +1623,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-135",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1647,7 +1635,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-136",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1659,7 +1647,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-137",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1671,7 +1659,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-138",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1683,7 +1671,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-139",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1695,7 +1683,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-140",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1707,7 +1695,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-141",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1719,7 +1707,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-142",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1731,7 +1719,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-143",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1755,7 +1743,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-145",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1767,7 +1755,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-146",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Selfunderstand"
     // },
     // {
@@ -1779,7 +1767,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-147",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1791,7 +1779,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-148",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1803,7 +1791,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-149",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1815,7 +1803,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-150",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1827,8 +1815,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-151",
-    //   attribute: "Communication"
+    //   name: "que-{{ $question->id }}",    //   attribute: "Communication"
     // },
     // {
     //   content: "自分の気持ちをしぐさでうまく表現する",
@@ -1839,7 +1826,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-152",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1851,7 +1838,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-153",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1863,7 +1850,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-154",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1875,7 +1862,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-155",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1887,7 +1874,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-156",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1899,7 +1886,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-157",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1911,7 +1898,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-158",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1923,7 +1910,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-159",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1935,7 +1922,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-160",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1947,7 +1934,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-161",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1959,7 +1946,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-162",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1971,7 +1958,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-163",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1983,7 +1970,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-164",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -1995,7 +1982,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-165",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -2007,7 +1994,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-166",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -2019,7 +2006,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-167",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -2031,7 +2018,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-168",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -2043,7 +2030,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-169",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
     // {
@@ -2055,7 +2042,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { value: "4", class: "option-D" },
     //     { value: "5", class: "option-E" }
     //   ],
-    //   name: "que-170",
+    //   name: "que-{{ $question->id }}",
     //   attribute: "Communication"
     // },
   ];
@@ -2154,6 +2141,8 @@ document.addEventListener('DOMContentLoaded', function () {
     return questionElement;
   }
 
+
+  // 質問をランダムに並び替える
   function shuffleQuestions() {
     for (let i = questions.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -2161,7 +2150,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  shuffleQuestions(); // 質問をランダムに並び替える
+  shuffleQuestions();
 
 
   function showNextField() {
@@ -2184,6 +2173,8 @@ document.addEventListener('DOMContentLoaded', function () {
     quizContainer.appendChild(questionElement);
   }
 
+
+  // プログレスバー
   function updateProgressBar() {
     const progress = document.getElementById('progress');
     const progressMarker = document.querySelector('.progress-marker');
