@@ -14,8 +14,10 @@ return new class extends Migration
     Schema::create('answers', function (Blueprint $table) {
       $table->id();
       $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-      $table->string('question_id');
-      $table->string('attribute_id');
+      $table->foreignId('question_id')->constrained()->cascadeOnDelete();
+      $table->foreignId('attribution_id')->constrained()->cascadeOnDelete();
+      $table->integer('value');
+      $table->integer('count');
       $table->timestamps();
     });
   }

@@ -45,11 +45,12 @@ Route::middleware('auth')->group(function () {
 
   //テスト結果送信ルート
   Route::post('/submit-test', [TestController::class, 'store'])->name('test.submit');
+  
+  Route::get('/test', [TestController::class, 'index'])->name('test');
+  Route::get('/result', [TestController::class, 'show'])->name('result');
 });
 
-Route::get('/test', function () {
-  return view('test');
-})->name('test');
+
 
 
 

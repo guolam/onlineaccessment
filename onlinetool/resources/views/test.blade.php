@@ -38,22 +38,22 @@
 
         </div>
 
-        @csrf
         @auth
-            {{-- <form method="POST" action="{{ route('save') }}"> --}}
+            <form method="POST" action="{{ route('test.submit') }}">
+                @csrf
 
-            <div class="progress-bar">
-                <div class="progress" id="progress"></div>
-                <div class="progress-marker"></div>
-                <h4 class="progress-percentage" id="progressPercentage"></h4>
-            </div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                    <div class="progress-marker"></div>
+                    <h4 class="progress-percentage" id="progressPercentage"></h4>
+                </div>
 
-            <div class="quiz-main-inner" id="quizContainer"></div>
-            <div class="center-align">
-                <button id="submitButton" class="button center-align hidden">送信</button>
-            </div>
+                <div class="quiz-main-inner" id="quizContainer"></div>
+                <div class="center-align">
+                    <button id="submitButton" class="button center-align hidden">送信</button>
+                </div>
 
-            {{-- <div class="center-align">
+                {{-- <div class="center-align">
             <button id="answerButton" @if ($ticket->remaining_tickets > 0) onclick="submitAnswer()" @else disabled @endif>
                 テストボタン
             </button>
@@ -61,6 +61,17 @@
 
             </form>
         @endauth
+
+
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+        <script>
+            window.questionsFromDatabase = @json($questions);
+        </script>
+
     </body>
 
     {{-- <script>
@@ -79,5 +90,4 @@
         }
     </script> --}}
 
-    </html>
 </x-app-layout>
