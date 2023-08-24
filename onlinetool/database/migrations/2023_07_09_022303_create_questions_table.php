@@ -15,7 +15,7 @@ return new class extends Migration
       $table->id();
       $table->string('content');
       $table->foreignId('attribution_id')->constrained()->cascadeOnDelete();
-      $table->boolean('reversedIndices')->default(false);
+      $table->boolean('reversedIndices');
       $table->timestamps();
     });
   }
