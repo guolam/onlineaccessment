@@ -70,21 +70,31 @@ class TestController extends Controller
     $attributions = Attribution::all();
     // 空の二重配列を用意
     $result = [];
+    $date = [];
     for ($i = 0; $i < $max_count; $i++) {
       // attribution_idの回数分繰り返す
       $array = [];
       foreach ($attributions as $attribution) {
         // attribution_idが$jのもの valueのみを取得
-        $answers = Answer::where('user_id', Auth::id())->where('count', $max_count)->where('attribution_id', $attribution->id)->pluck('value');
+        $answers = Answer::where([
+          ['user_id', Auth::id()],
+          ['attribution_id', $attribution->id],
+          ['count', $i + 1]
+        ])->pluck('value');
         // $answersのvalueの平均値を取得
         $average = $answers->avg();
         // $arrayに$averageを追加
         $array[] = $average;
       }
       // $resultに$arrayを追加
+      $day = Answer::where('user_id', Auth::id())->where('count', $max_count)->first()->created_at;
+      $day = $day->format('Y-m-d');
+      $date[] = $day;
       $result[] = $array;
     }
-    return view('result');
+    // $attributionsからnameのみを取得
+    $attribution = $attributions->pluck('name');
+    return view('result', compact('result', 'attribution', 'date'));
   }
 
   /**
