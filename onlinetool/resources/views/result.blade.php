@@ -36,9 +36,9 @@
         </div>
         <script>
             // $result $attribution を取得
-            let result = @json($result);
-            let attribution = @json($attribution);
-            let date = @json($date);
+            let result = @json($result ?? null);
+            let attribution = @json($attribution ?? null);
+            let date = @json($date ?? null);
             let datasetsArray = [];
 
             for (let i = 0; i < result.length; i++) {
