@@ -23,7 +23,8 @@
             <div class="flex justify-center">
                 {{-- メールで照合 --}}
                 <input type="hidden" id="email" name="email" value="{{ auth()->user()->email }}">
-                <x-primary-button id="fetchData" class="mt-4 mb-4 py-2 px-4 bg-blue-500 text-black rounded-lg">診断結果はこちらをクリック
+                <x-primary-button id="fetchData" class="mt-4 mb-4 py-2 px-4 bg-blue-500 text-black rounded-lg">
+                    <a href="{{ route('result') }}">診断結果はこちらをクリック</a>
                 </x-primary-button>
             </div>
         @endauth
