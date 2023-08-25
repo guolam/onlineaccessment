@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="quiz-main-inner" id="quizContainer"></div>
-                <div class="center-align">
+                <div class="center-align my-5">
                     <button id="submitButton" class="button center-align hidden">送信</button>
                 </div>
 
