@@ -44,6 +44,14 @@ class TestController extends Controller
         $answer->user_id = Auth::id();
         $answer->question_id = $question_id;
         $answer->attribution_id = $question->attribution_id;
+        if ($question->reversedIndices) {
+          $number = $request->$question_id;
+          $array = ['1' => '5', '2' => '4', '3' => '3', '4' => '2', '5' => '1'];
+          $number = $array[$number];
+          $answer->value = $number;
+        } else {
+          $answer->value = $request->$question_id;
+        }
         $answer->value = $request->$question_id;
         $answer->count = $max_count + 1;
         $answer->save();
@@ -57,7 +65,36 @@ class TestController extends Controller
    */
   public function show()
   {
-    return view('result');
+    // answerのカウントの最大値を取得
+    $max_count = Answer::where('user_id', Auth::id())->max('count');
+    $attributions = Attribution::all();
+    // 空の二重配列を用意
+    $result = [];
+    $date = [];
+    for ($i = 0; $i < $max_count; $i++) {
+      // attribution_idの回数分繰り返す
+      $array = [];
+      foreach ($attributions as $attribution) {
+        // attribution_id と count が一致するanswerのvalueを取得
+        $answers = Answer::where([
+          ['user_id', Auth::id()],
+          ['attribution_id', $attribution->id],
+          ['count', $i + 1]
+        ])->pluck('value');
+        // $answersのvalueの平均値を取得
+        $average = $answers->avg();
+        // $arrayに$averageを追加
+        $array[] = $average;
+      }
+      $day = Answer::where('user_id', Auth::id())->where('count', $max_count)->first()->created_at;
+      $day = $day->format('Y-m-d');
+      $date[] = $day;
+      // $resultに$arrayを追加
+      $result[] = $array;
+    }
+    // $attributionsからnameのみを取得
+    $attribution = $attributions->pluck('name');
+    return view('result', compact('result', 'attribution', 'date'));
   }
 
   /**

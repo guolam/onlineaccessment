@@ -23,7 +23,8 @@
             <div class="flex justify-center">
                 {{-- メールで照合 --}}
                 <input type="hidden" id="email" name="email" value="{{ auth()->user()->email }}">
-                <x-primary-button id="fetchData" class="mt-4 mb-4 py-2 px-4 bg-blue-500 text-black rounded-lg">診断結果はこちらをクリック
+                <x-primary-button id="fetchData" class="mt-4 mb-4 py-2 px-4 bg-blue-500 text-black rounded-lg">
+                    <a href="{{ route('result') }}">診断結果はこちらをクリック</a>
                 </x-primary-button>
             </div>
         @endauth
@@ -33,6 +34,40 @@
                 <canvas id="radarChart" class="w-full"></canvas>
             </div>
         </div>
+        <script>
+            // $result $attribution を取得
+            let result = @json($result ?? null);
+            let attribution = @json($attribution ?? null);
+            let date = @json($date ?? null);
+            let datasetsArray = [];
+
+            for (let i = 0; i < result.length; i++) {
+                datasetsArray.push({
+                    label: `${date[i]}`,
+                    data: result[i],
+                    borderColor: `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 1)`,
+                    backgroundColor: `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 0.2)`
+                });
+            }
+
+            let ctx = document.getElementById('radarChart').getContext('2d'); // 注意: canvas IDを 'radarChart' に変更しています
+            let radarChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: attribution,
+                    datasets: datasetsArray
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        r: {
+                            suggestedMin: 0,
+                            suggestedMax: 5,
+                        }
+                    }
+                }
+            });
+        </script>
     </body>
 
 
