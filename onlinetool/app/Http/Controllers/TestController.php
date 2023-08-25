@@ -75,7 +75,7 @@ class TestController extends Controller
       // attribution_idの回数分繰り返す
       $array = [];
       foreach ($attributions as $attribution) {
-        // attribution_idが$jのもの valueのみを取得
+        // attribution_id と count が一致するanswerのvalueを取得
         $answers = Answer::where([
           ['user_id', Auth::id()],
           ['attribution_id', $attribution->id],
@@ -86,10 +86,10 @@ class TestController extends Controller
         // $arrayに$averageを追加
         $array[] = $average;
       }
-      // $resultに$arrayを追加
       $day = Answer::where('user_id', Auth::id())->where('count', $max_count)->first()->created_at;
       $day = $day->format('Y-m-d');
       $date[] = $day;
+      // $resultに$arrayを追加
       $result[] = $array;
     }
     // $attributionsからnameのみを取得
