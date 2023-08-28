@@ -1,7 +1,6 @@
 <x-app-layout>
 
     @php
-        
         $kanjiNames = [
             'Problemsolving' => '問題解決力',
             'Resilience' => 'レジリエンス',
