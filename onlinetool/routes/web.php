@@ -43,6 +43,8 @@ Route::middleware('auth')->group(function () {
   Route::get('/test', [TestController::class, 'index'])->name('test');
   //結果表示ルート
   Route::get('/result', [TestController::class, 'show'])->name('result');
+  //分析結果表示ルート
+  Route::get('analysis', [TestController::class, 'analysis'])->name('analysis');
 });
 
 
