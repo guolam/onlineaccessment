@@ -21,12 +21,6 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-// Route::get('/dashboard', [GoogleSheetsController::class, 'getData'])
-//   ->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::get('/google-sheets-data', [GoogleSheetsController::class, 'getData'])
-//   ->middleware(['auth', 'verified'])->name('sheet');
-
 
 
 Route::get('/dashboard', function () {
@@ -45,8 +39,9 @@ Route::middleware('auth')->group(function () {
 
   //テスト結果送信ルート
   Route::post('/submit-test', [TestController::class, 'store'])->name('test.submit');
-  
+  //テスト内容表示ルート
   Route::get('/test', [TestController::class, 'index'])->name('test');
+  //結果表示ルート
   Route::get('/result', [TestController::class, 'show'])->name('result');
 });
 

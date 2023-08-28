@@ -1,5 +1,19 @@
 <x-app-layout>
 
+    @php
+        
+        $kanjiNames = [
+            'Problemsolving' => '問題解決力',
+            'Resilience' => 'レジリエンス',
+            'Problemfocus' => '問題焦点型',
+            'Timeperspective' => '時間的展望',
+            'Selfesteem' => '自己肯定感',
+            'Selfunderstand' => '自己認知',
+            'Communication' => 'コミュニケーション力',
+        ];
+        
+    @endphp
+
     <head>
         <title>ビジネス力診断</title>
         <!-- Chart.jsのスクリプトを読み込む -->
@@ -34,6 +48,61 @@
                 <canvas id="radarChart" class="w-full"></canvas>
             </div>
         </div>
+
+
+        {{-- 回答結果を取得 --}}
+        <div class="container mx-auto mt-8">
+            <h2 class="text-xl font-semibold mb-4">結果:</h2>
+            <div class="bg-white rounded-lg shadow-md">
+                <table class="w-full border-collapse">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="py-2 px-4 text-left">日付</th>
+                            @foreach ($attribution as $name)
+                                <th class="py-2 px-4 text-left">{{ $kanjiNames[$name] }}</th>
+                            @endforeach
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($result as $index => $array)
+                            <tr>
+                                <td class="py-2 px-4">{{ $date[$index] }}</td>
+                                @foreach ($array as $average)
+                                    <td class="py-2 px-4">{{ number_format($average, 2) }}</td>
+                                @endforeach
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        @foreach ($attribution as $index => $name)
+            <div class="container mx-auto mt-8">
+                <h2 class="text-xl font-semibold mb-4">{{ $kanjiNames[$name] }}の詳細:</h2>
+                <div class="bg-white rounded-lg shadow-md">
+                    <table class="w-full border-collapse">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="py-2 px-4 text-left">日付</th>
+                                <th class="py-2 px-4 text-left">点数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($result as $index => $array)
+                                <tr>
+                                    <td class="py-2 px-4">{{ $date[$index] }}</td>
+                                    <td class="py-2 px-4">{{ $array[$index] }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        @endforeach
+        <div class="mb-5">
+        </div>
         <script>
             // $result $attribution を取得
             let result = @json($result ?? null);
@@ -49,6 +118,7 @@
                     backgroundColor: `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 0.2)`
                 });
             }
+
 
             let ctx = document.getElementById('radarChart').getContext('2d'); // 注意: canvas IDを 'radarChart' に変更しています
             let radarChart = new Chart(ctx, {
@@ -67,6 +137,12 @@
                     }
                 }
             });
+
+            // 新しいラベルの配列
+            const newLabels = ['問題解決力', 'レジリエンス', '問題焦点型', '時間的展望', '自己肯定感', '自己認知', 'コミュニケーション力'];
+            radarChart.data.labels = newLabels;
+            // チャートを再描画する
+            radarChart.update();
         </script>
     </body>
 
