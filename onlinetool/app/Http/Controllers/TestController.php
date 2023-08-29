@@ -86,7 +86,7 @@ class TestController extends Controller
         // $arrayに$averageを追加
         $array[] = $average;
       }
-      $day = Answer::where('user_id', Auth::id())->where('count', $max_count)->first()->created_at;
+      $day = Answer::where('user_id', Auth::id())->where('count', $i + 1)->first()->created_at;
       $day = $day->format('Y-m-d');
       $date[] = $day;
       // $resultに$arrayを追加

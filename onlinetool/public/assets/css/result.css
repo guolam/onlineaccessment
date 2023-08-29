@@ -1,0 +1,58 @@
+.table-header {
+  padding: 10px 20px;
+  /* 調整したい余白の値に変更 */
+}
+
+.table-cell {
+  padding: 10px 20px;
+  /* 調整したい余白の値に変更 */
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.accordion-header.active {
+  background-color: #ddd;
+}
+
+.accordion-title {
+  font-weight: bold;
+}
+
+.accordion-button {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 1.25rem;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.accordion-button.active {
+  background-color: #555;
+  color: #fff;
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  transition: display 0.3s;
+}
+
+.accordion-content.active {
+  display: block;
+}
