@@ -73,7 +73,7 @@
                             </p>
                         </div>
                         <div class="mt-8">
-                            <a href="{{ route('login') }}"
+                            <a href="{{ route('register') }}"
                                 class="bg-blue-500 hover:bg-blue-900 text-white font-bold py-5 px-5 rounded">
                                 無料　15分で簡単診断
                             </a>
