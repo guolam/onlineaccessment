@@ -45,7 +45,7 @@ Route::middleware('auth')->group(function () {
   Route::get('/result', [TestController::class, 'show'])->name('result');
   //分析結果表示ルート
   // Route::get('analysis', [TestController::class, 'analysis'])->name('analysis');
-  Route::get('/analysis/{index}', [AnalysisController::class, 'show'])->name('analysis');
+  Route::get('/analysis/{count}', [AnalysisController::class, 'show'])->name('analysis');
 });
 
 
