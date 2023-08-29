@@ -6,7 +6,7 @@
 
         @foreach ($result as $index => $value)
             <!-- 表示内容を記述 -->
-            <p>{{ $attributions[$index] }} : {{ $value }}</p>
+            <p>{{ $attributions[$index] }} : {{ number_format($value, 2) }}</p>
         @endforeach
     </div>
 

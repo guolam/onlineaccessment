@@ -303,15 +303,23 @@
             </div>
         </div>
 
-        <div class="accordion">
+
+
+
+        <div class="accordion container mx-auto mt-8 px-4">
             @foreach ($attribution as $index => $name)
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h2 class="accordion-title">{{ $kanjiNames[$name] }}の詳細</h2>
-                        <button class="accordion-button" aria-expanded="false"></button>
+                <div class="accordion-item border rounded-lg shadow-md mb-4">
+                    <div
+                        class="accordion-header px-4 py-3 bg-gray-100 cursor-pointer flex items-center justify-between">
+                        <h2 class="accordion-title text-lg font-semibold">{{ $kanjiNames[$name] }}の詳細</h2>
+                        <button class="accordion-button" aria-expanded="false">
+                            <span class="material-symbols-outlined">
+                                expand_circle_down
+                            </span>
+                        </button>
                     </div>
-                    <div class="accordion-content">
-                        <table>
+                    <div class="accordion-content px-4 py-3">
+                        <table class="table-auto w-full">
                             <thead>
                                 <tr>
                                     <th class="table-header">日付</th>
@@ -323,10 +331,8 @@
                                 @foreach ($result as $resultIndex => $array)
                                     <tr>
                                         <td class="table-cell">{{ $date[$resultIndex] }}</td>
-                                        <td class="table-cell"> {{ number_format($array[$index], 2) }}</td>
-
+                                        <td class="table-cell">{{ number_format($array[$index], 2) }}</td>
                                         <td class="table-cell">
-                                            {{-- <button class="accordion-button-detail" aria-expanded="false">詳細を表示</button> --}}
                                             <div class="accordion-content-detail">
                                                 @if ($array[$index] > 3)
                                                     {!! $attributeDescriptions[$name]['excellent'] !!}
@@ -352,69 +358,17 @@
         </div>
 
 
+
         <div class="mb-5">
         </div>
 
-        <style>
-            .table-header {
-                padding: 10px 20px;
-                /* 調整したい余白の値に変更 */
-            }
 
-            .table-cell {
-                padding: 10px 20px;
-                /* 調整したい余白の値に変更 */
-            }
 
-            .accordion-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background-color: #f1f1f1;
-                padding: 1rem;
-                border-bottom: 1px solid #ccc;
-                cursor: pointer;
-                transition: background-color 0.3s;
-            }
-
-            .accordion-header.active {
-                background-color: #ddd;
-            }
-
-            .accordion-title {
-                font-weight: bold;
-            }
-
-            .accordion-button {
-                display: inline-block;
-                width: 1.25rem;
-                height: 1.25rem;
-                background-color: #ccc;
-                text-align: center;
-                line-height: 1.25rem;
-                border-radius: 50%;
-                font-size: 0.75rem;
-                transition: background-color 0.3s, transform 0.3s;
-            }
-
-            .accordion-button.active {
-                background-color: #555;
-                color: #fff;
-                transform: rotate(180deg);
-            }
-
-            .accordion-content {
-                display: none;
-                padding: 1rem;
-                border-bottom: 1px solid #ccc;
-                background-color: #fff;
-                transition: display 0.3s;
-            }
-
-            .accordion-content.active {
-                display: block;
-            }
-        </style>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="{{ '/assets/css/result.css' }}" />
         <script>
             // $result $attribution を取得
             let result = @json($result ?? null);

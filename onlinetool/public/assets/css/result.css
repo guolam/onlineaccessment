@@ -31,7 +31,7 @@
   display: inline-block;
   width: 1.25rem;
   height: 1.25rem;
-  background-color: #ccc;
+
   text-align: center;
   line-height: 1.25rem;
   border-radius: 50%;
@@ -55,4 +55,12 @@
 
 .accordion-content.active {
   display: block;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
 }
