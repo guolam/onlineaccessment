@@ -422,14 +422,29 @@
             let date = @json($date ?? null);
             let datasetsArray = [];
 
+            const colorPalette = [
+                '#FF6384', // 赤
+                '#36A2EB', // 青
+                '#FFCE56', // 黄
+                '#4BC0C0', // 緑
+                '#9966FF', // 紫
+                '#FF9F40', // オレンジ
+                '#00BFFF', // 空色
+                // 他の色を追加...
+            ];
+
+
             for (let i = 0; i < result.length; i++) {
+                const borderColor = colorPalette[i % colorPalette.length]; // カラーパレットから選択
+                const backgroundColor = `${borderColor}33`; // 透明度を設定
                 datasetsArray.push({
                     label: `${date[i]}`,
                     data: result[i],
-                    borderColor: `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 1)`,
-                    backgroundColor: `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 0.2)`
+                    borderColor: borderColor,
+                    backgroundColor: backgroundColor
                 });
             }
+
 
 
             let ctx = document.getElementById('radarChart').getContext('2d'); // 注意: canvas IDを 'radarChart' に変更しています
