@@ -23,6 +23,7 @@ class AnalysisController extends Controller
         ['attribution_id', $attribution->id],
         ['count', $count]
       ])->pluck('value');
+
       // $answersのvalueの平均値を取得
       $average = $answers->avg();
       $result[] = $average;
@@ -31,30 +32,24 @@ class AnalysisController extends Controller
     $date = $day->format('Y-m-d');
     $attributions = $attributions->pluck('name')->toArray();
 
-    return view('analysis', compact('result', 'attributions', 'date'));
+    $kanjiNames = [
+      'Problemsolving' => '問題解決力',
+      'Resilience' => 'レジリエンス',
+      'Problemfocus' => '問題焦点型',
+      'Timeperspective' => '時間的展望',
+      'Selfesteem' => '自己肯定感',
+      'Selfunderstand' => '自己認知',
+      'Communication' => 'コミュニケーション力',
+    ];
+
+    // 英語名を日本語名に変換する関数
+    $getKanjiName = function ($englishName) use ($kanjiNames) {
+      return $kanjiNames[$englishName] ?? $englishName;
+    };
+
+
+    return view('analysis', compact('result', 'attributions', 'date', 'getKanjiName'));
   }
 }
 
-//     ($index)
-//   {
-//     // $result の仮想的なデータを作成する（実際の計算方法に合わせて修正が必要）
-//     $result = [
-//       ['attribute1' => 4.5, 'attribute2' => 3.2, 'attribute3' => 2.7], // 例: 計算結果1
-//       ['attribute1' => 3.8, 'attribute2' => 4.1, 'attribute3' => 2.9], // 例: 計算結果2
-//       // 他の計算結果を追加
-//     ];
-
-//     // 特定のインデックスの結果を取得
-//     $calculatedResult = $result[$index];
-
-//     // ビューデータを準備
-//     $data = [
-//       'index' => $index,
-//       'calculatedResult' => $calculatedResult, // 計算結果を渡す
-//       // 他のビューデータを追加
-//     ];
-
-//     // var_dump($index);
-//     return view('analysis', $data);
-//   }
-// }
+//    
