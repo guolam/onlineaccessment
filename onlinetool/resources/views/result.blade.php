@@ -269,34 +269,32 @@
         </div>
 
 
-        {{-- 回答結果を取得 --}}
-        <div class="container mx-auto mt-8">
+        <div class="container mx-auto mt-8 px-4">
             <h2 class="text-xl font-semibold mb-4">結果:</h2>
-            <div class="bg-white rounded-lg shadow-md">
-                <table class="w-full border-collapse">
+            <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                <table class="w-full table-auto">
                     <thead class="bg-gray-100">
                         <tr>
-                            <th class="py-2 px-4 text-left text-sm">日付</th>
+                            <th class="py-2 px-2 sm:px-4 text-left text-sm">日付</th>
                             @foreach ($attribution as $name)
-                                <th class="py-2 px-4 text-left text-sm">{{ $kanjiNames[$name] }}</th>
+                                <th class="py-2 px-2 sm:px-4 text-left text-sm">{{ $kanjiNames[$name] }}</th>
                             @endforeach
-                            {{-- <th class="py-2 px-4 text-left text-sm">分析</th> --}}
+                            <th class="py-2 px-2 sm:px-4 text-left text-sm">分析</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         @foreach ($result as $index => $array)
                             <tr>
-                                <td class="py-2 px-4">{{ $date[$index] }}</td>
+                                <td class="py-2 px-2 sm:px-4">{{ $date[$index] }}</td>
                                 @foreach ($array as $average)
-                                    <td class="py-2 px-4">{{ number_format($average, 2) }}</td>
+                                    <td class="py-2 px-2 sm:px-4">{{ number_format($average, 2) }}</td>
                                 @endforeach
-                                {{-- <td class="py-2 px-4">
-                                    <a href="{{ route('analysis', ['index' => $index]) }}">
-
-                                        <div class="text-blue-500 hover:underline">分析結果
-                                    </a>
-                                </td> --}}
+                                {{-- <td class="py-2 px-2 sm:px-4">
+                            <a href="{{ route('analysis', ['result' => json_encode($result)]) }}" class="text-blue-500 hover:underline">
+                                分析結果
+                            </a>
+                        </td> --}}
                             </tr>
                         @endforeach
                     </tbody>
