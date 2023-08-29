@@ -20,22 +20,21 @@
     </x-slot>
 
     <body>
-        <div class="flex flex-col md:flex-row justify-around content-center mt-5 mb-2">
-            <div class="mb-2">
-                <x-image.time />
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 mb-2 mx-4 md:mx-0">
+            <div class="mb-2 mx-auto md:mx-0 md:text-center">
+                <x-image.time class="mx-auto mb-2" />
                 <p class="text-center">0分以内に完成してください</p>
             </div>
 
-            <div class="mb-2">
-                <x-image.chokan />
+            <div class="mb-2 mx-auto md:mx-0 md:text-center">
+                <x-image.chokan class="mx-auto mb-2" />
                 <p class="text-center">直感で回答してください。</p>
             </div>
 
-            <div class="mb-2 justify-center items-center">
-                <x-image.onetime />
+            <div class="mb-2 mx-auto md:mx-0 md:text-center">
+                <x-image.onetime class="mx-auto mb-2" />
                 <p class="text-center">一回のみ押してください</p>
             </div>
-
         </div>
 
         @auth
