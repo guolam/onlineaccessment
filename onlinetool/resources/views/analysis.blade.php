@@ -1,13 +1,13 @@
 <x-app-layout>
     <div>
         <!-- ここにビューのコードを追加 -->
-        <p>Index: {{ $result }}</p>
+        <p>date: {{ $date }}</p>
         <!-- 他のビューコードを追加 -->
 
-        @foreach ($result as $index => $array)
+        @foreach ($result as $index => $value)
             <!-- 表示内容を記述 -->
+            <p>{{ $attributions[$index] }} : {{ $value }}</p>
         @endforeach
-        dd($request->query('result'));
     </div>
 
 </x-app-layout>

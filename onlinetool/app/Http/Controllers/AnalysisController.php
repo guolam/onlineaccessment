@@ -10,14 +10,28 @@ use Illuminate\Support\Facades\Auth;
 
 class AnalysisController extends Controller
 {
-  public function show(Request $request)
+  public function show($count)
   {
-    $result = json_decode($request->query('result'), true);
-    dd($request->query('result'));
-    // $resultを使って必要な処理を実行
-    // ...
+    $attributions = Attribution::all();
 
-    return view('analysis', compact('result'));
+    // 空の二重配列を用意
+    $result = [];
+    foreach ($attributions as $attribution) {
+      // attribution_id と count が一致するanswerのvalueを取得
+      $answers = Answer::where([
+        ['user_id', Auth::id()],
+        ['attribution_id', $attribution->id],
+        ['count', $count]
+      ])->pluck('value');
+      // $answersのvalueの平均値を取得
+      $average = $answers->avg();
+      $result[] = $average;
+    }
+    $day = Answer::where('user_id', Auth::id())->where('count', $count)->first()->created_at;
+    $date = $day->format('Y-m-d');
+    $attributions = $attributions->pluck('name')->toArray();
+
+    return view('analysis', compact('result', 'attributions', 'date'));
   }
 }
 

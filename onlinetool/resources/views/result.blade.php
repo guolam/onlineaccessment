@@ -290,11 +290,12 @@
                                 @foreach ($array as $average)
                                     <td class="py-2 px-2 sm:px-4">{{ number_format($average, 2) }}</td>
                                 @endforeach
-                                {{-- <td class="py-2 px-2 sm:px-4">
-                            <a href="{{ route('analysis', ['result' => json_encode($result)]) }}" class="text-blue-500 hover:underline">
-                                分析結果
-                            </a>
-                        </td> --}}
+                                <td class="py-2 px-2 sm:px-4">
+                                    <a href="{{ route('analysis', ['count' => $index + 1]) }}"
+                                        class="text-blue-500 hover:underline">
+                                        分析結果
+                                    </a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
