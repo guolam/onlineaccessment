@@ -356,13 +356,8 @@
                 </div>
             @endforeach
         </div>
-
-
-
         <div class="mb-5">
         </div>
-
-
 
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -427,7 +422,6 @@
 
             document.addEventListener("DOMContentLoaded", function() {
                 const accordionHeaders = document.querySelectorAll(".accordion-header");
-
                 accordionHeaders.forEach(function(header) {
                     header.addEventListener("click", function() {
                         this.classList.toggle("active");
