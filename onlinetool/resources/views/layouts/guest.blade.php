@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="/logo/logo.svg" type="image/png">
+    <link rel="icon" href="{{ asset('/logo/logo.svg') }}" type="image/png">
 
     {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
     <title>株式会社OnLine || ビジネス診断</title>
