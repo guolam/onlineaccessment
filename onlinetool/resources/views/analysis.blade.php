@@ -239,7 +239,6 @@
                              {!! $attributeDescriptions[$attributions[$index]]['poor'] !!}
                          @endif
                      </div>
-
                  </div>
              @endforeach
 
