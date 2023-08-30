@@ -363,7 +363,7 @@
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <link rel="stylesheet" href="{{ '/assets/css/result.css' }}" />
+        <link rel="stylesheet" href="{{ asset('/assets/css/result.css') }}" />
         <script>
             // $result $attribution を取得
             let result = @json($result ?? null);
