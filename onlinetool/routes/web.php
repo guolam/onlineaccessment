@@ -46,9 +46,22 @@ Route::middleware('auth')->group(function () {
   //分析結果表示ルート
   // Route::get('analysis', [TestController::class, 'analysis'])->name('analysis');
   Route::get('/analysis/{count}', [AnalysisController::class, 'show'])->name('analysis');
+
+  // Route::get('/analysis', [AnalysisController::class, 'show'])->name('analysis');
 });
 
+Route::get('/admin', function () {
+  return view('dashboard.admin');
+});
 
+Route::get('/online_admin', function () {
+  return view('dashboard.online');
+});
+
+//summaryページ
+Route::middleware(['auth', 'verified'])->get('/summary', function () {
+  return view('summary');
+})->name('summary');
 
 
 

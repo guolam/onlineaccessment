@@ -308,6 +308,9 @@
 
         <div class="accordion container mx-auto mt-8 px-4">
             @foreach ($attribution as $index => $name)
+                <tr>
+                    <td colspan="3" class="border-t border-gray-200"></td>
+                </tr>
                 <div class="accordion-item border rounded-lg shadow-md mb-4">
                     <div
                         class="accordion-header px-4 py-3 bg-gray-100 cursor-pointer flex items-center justify-between">
@@ -321,6 +324,7 @@
                     <div class="accordion-content px-4 py-3">
                         <table class="table-auto w-full">
                             <thead>
+
                                 <tr>
                                     <th class="table-header">日付</th>
                                     <th class="table-header">点数</th>
@@ -329,6 +333,9 @@
                             </thead>
                             <tbody>
                                 @foreach ($result as $resultIndex => $array)
+                                    <tr>
+                                        <td colspan="3" class="border-t border-gray-200"></td>
+                                    </tr>
                                     <tr>
                                         <td class="table-cell">{{ $date[$resultIndex] }}</td>
                                         <td class="table-cell">{{ number_format($array[$index], 2) }}</td>
@@ -344,11 +351,6 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    @if ($loop->index === 0)
-                                        <tr>
-                                            <td colspan="3" class="border-t border-gray-200"></td>
-                                        </tr>
-                                    @endif
                                 @endforeach
                             </tbody>
                         </table>
