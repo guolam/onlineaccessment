@@ -272,10 +272,9 @@
         <div class="container mx-auto mt-8 px-4">
             <h2 class="text-xl font-semibold mb-4">結果</h2>
 
+            <!-- 携帯表示用のコード -->
             <div class="sm:hidden">
                 <div class="bg-white rounded-lg overflow-x-auto accordion container">
-
-                    <!-- 携帯表示用のコード -->
                     @foreach ($result as $index => $array)
                         <div class="mb-4 accordion-item border rounded-lg shadow-md">
                             <div class="accordion-header text-gray-600">
@@ -308,9 +307,10 @@
                 </div>
             </div>
 
+            <!-- PC表示用のコード -->
             <div class="hidden sm:block">
                 <div class="bg-white rounded-lg shadow-md overflow-x-auto accordion container">
-                    <!-- PC表示用のコード -->
+
                     <table class="w-full table-auto">
                         <thead class="bg-gray-100">
                             <tr>
@@ -346,7 +346,6 @@
 
         <div class="container mx-auto mt-8 px-4">
             <h2 class="text-xl font-semibold mb-4">各項目の詳細</h2>
-
             <div class="sm:hidden">
                 <!-- 携帯表示用のコード -->
                 @foreach ($attribution as $index => $name)
@@ -380,11 +379,8 @@
                                                 </span>
                                             </div>
                                         </div>
-
                         </div>
                         <div class="accordion-content accordion-hidden text-gray-800">
-
-
                             @if ($array[$index] > 3)
                                 {!! $attributeDescriptions[$name]['excellent'] !!}
                             @elseif ($array[$index] > 2)
@@ -465,6 +461,14 @@
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="stylesheet" href="{{ asset('/assets/css/result.css') }}" />
+
+        <style>
+            @media (max-width: 767px) {
+                .sm:hidden {
+                    display: none !important;
+                }
+            }
+        </style>
         <script>
             // $result $attribution を取得
             let result = @json($result ?? null);
@@ -494,8 +498,6 @@
                     backgroundColor: backgroundColor
                 });
             }
-
-
 
             let ctx = document.getElementById('radarChart').getContext('2d'); // 注意: canvas IDを 'radarChart' に変更しています
             let radarChart = new Chart(ctx, {
