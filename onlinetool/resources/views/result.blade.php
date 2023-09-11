@@ -270,43 +270,140 @@
 
 
         <div class="container mx-auto mt-8 px-4">
-            <h2 class="text-xl font-semibold mb-4">結果:</h2>
-            <div class="bg-white rounded-lg shadow-md overflow-x-auto">
-                <table class="w-full table-auto">
-                    <thead class="bg-gray-100">
-                        <tr>
-                            <th class="py-2 px-2 sm:px-4 text-left text-sm">日付</th>
-                            @foreach ($attribution as $name)
-                                <th class="py-2 px-2 sm:px-4 text-left text-sm">{{ $kanjiNames[$name] }}</th>
-                            @endforeach
-                            <th class="py-2 px-2 sm:px-4 text-left text-sm">分析</th>
-                        </tr>
-                    </thead>
+            <h2 class="text-xl font-semibold mb-4">結果</h2>
 
-                    <tbody>
-                        @foreach ($result as $index => $array)
-                            <tr>
-                                <td class="py-2 px-2 sm:px-4">{{ $date[$index] }}</td>
-                                @foreach ($array as $average)
-                                    <td class="py-2 px-2 sm:px-4">{{ number_format($average, 2) }}</td>
+            <div class="sm:hidden">
+                <div class="bg-white rounded-lg overflow-x-auto accordion container">
+
+                    <!-- 携帯表示用のコード -->
+                    @foreach ($result as $index => $array)
+                        <div class="mb-4 accordion-item border rounded-lg shadow-md">
+                            <div class="accordion-header text-gray-600">
+                                <div class="accordion-title">{{ $date[$index] }}</div>
+                                <div class="accordion-button">
+                                    <span class="material-symbols-outlined">
+                                        expand_circle_down
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="accordion-content accordion-hidden text-gray-800 ">
+                                @foreach ($attribution as $name)
+                                    <div class="accordion-item py-1">
+                                        <div class="flex">
+                                            <div class="w-2/3">{{ $kanjiNames[$name] }}:</div> <!-- 列1 -->
+                                            <div class="w-1/3 text-right">
+                                                {{ number_format($array[$loop->index], 1) }}／5.0</div> <!-- 列2 -->
+                                        </div>
+                                    </div>
                                 @endforeach
-                                <td class="py-2 px-2 sm:px-4">
+                                <div>
                                     <a href="{{ route('analysis', ['count' => $index + 1]) }}"
-                                        class="text-blue-500 hover:underline">
+                                        class="text-blue-500 hover:underline py-5">
                                         分析結果
                                     </a>
-                                </td>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+            <div class="hidden sm:block">
+                <div class="bg-white rounded-lg shadow-md overflow-x-auto accordion container">
+                    <!-- PC表示用のコード -->
+                    <table class="w-full table-auto">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="py-2 px-2 sm:px-4 text-left text-sm">日付</th>
+                                @foreach ($attribution as $name)
+                                    <th class="py-2 px-2 sm:px-4 text-left text-sm">{{ $kanjiNames[$name] }}</th>
+                                @endforeach
+                                <th class="py-2 px-2 sm:px-4 text-left text-sm">分析</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+
+                        <tbody>
+                            @foreach ($result as $index => $array)
+                                <tr>
+                                    <td class="py-2 px-2 sm:px-4">{{ $date[$index] }}</td>
+                                    @foreach ($array as $average)
+                                        <td class="py-2 px-2 sm:px-4">{{ number_format($average, 1) }}／5.0</td>
+                                    @endforeach
+                                    <td class="py- px-2 sm:px-4">
+                                        <a href="{{ route('analysis', ['count' => $index + 1]) }}"
+                                            class="text-blue-500 hover:underline">
+                                            分析結果
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
 
+        <div class="container mx-auto mt-8 px-4">
+            <h2 class="text-xl font-semibold mb-4">各項目の詳細</h2>
+
+            <div class="sm:hidden">
+                <!-- 携帯表示用のコード -->
+                @foreach ($attribution as $index => $name)
+                    <div class="accordion-item border rounded-lg shadow-md mb-4">
+                        <div
+                            class="accordion-header px-4 py-3 bg-gray-100 cursor-pointer flex items-center justify-between">
+                            <h2 class="accordion-title text-lg font-semibold">{{ $kanjiNames[$name] }}</h2>
+                            <button class="accordion-button" aria-expanded="false">
+                                <span class="material-symbols-outlined">
+                                    expand_circle_down
+                                </span>
+                            </button>
+                        </div>
+                        <div class="accordion-content px-4 py-3">
+                            <table class="table-auto w-full">
+                                <tbody class="accordion container">
+                                    @foreach ($result as $resultIndex => $array)
+                                        <div class="accordion-header cursor-pointer">
+                                            <div class="flex items-center justify-between">
+                                                <div>{{ $date[$resultIndex] }}</div>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <div class="text-right"> <!-- text-rightクラスを追加 -->
+                                                    <div>
+                                                        点数: {{ number_format($array[$index], 1) }}／5.0
+                                                    </div>
+                                                </div>
+                                            </div>&nbsp;
+                                            <div class="accordion-button">
+                                                <span class="material-symbols-outlined">
+                                                    expand_circle_down
+                                                </span>
+                                            </div>
+                                        </div>
+
+                        </div>
+                        <div class="accordion-content accordion-hidden text-gray-800">
 
 
-        <div class="accordion container mx-auto mt-8 px-4">
+                            @if ($array[$index] > 3)
+                                {!! $attributeDescriptions[$name]['excellent'] !!}
+                            @elseif ($array[$index] > 2)
+                                {!! $attributeDescriptions[$name]['normal'] !!}
+                            @else
+                                {!! $attributeDescriptions[$name]['poor'] !!}
+                            @endif
+                        </div>
+                @endforeach
+                </tbody>
+                </table>
+            </div>
+        </div>
+        @endforeach
+        </div>
+
+
+        <div class="hidden sm:block">
+            <!-- PC表示用のコード -->
             @foreach ($attribution as $index => $name)
                 <tr>
                     <td colspan="3" class="border-t border-gray-200"></td>
@@ -314,7 +411,7 @@
                 <div class="accordion-item border rounded-lg shadow-md mb-4">
                     <div
                         class="accordion-header px-4 py-3 bg-gray-100 cursor-pointer flex items-center justify-between">
-                        <h2 class="accordion-title text-lg font-semibold">{{ $kanjiNames[$name] }}の詳細</h2>
+                        <h2 class="accordion-title text-lg font-semibold">{{ $kanjiNames[$name] }}</h2>
                         <button class="accordion-button" aria-expanded="false">
                             <span class="material-symbols-outlined">
                                 expand_circle_down
@@ -324,7 +421,6 @@
                     <div class="accordion-content px-4 py-3">
                         <table class="table-auto w-full">
                             <thead>
-
                                 <tr>
                                     <th class="table-header">日付</th>
                                     <th class="table-header">点数</th>
@@ -337,9 +433,9 @@
                                         <td colspan="3" class="border-t border-gray-200"></td>
                                     </tr>
                                     <tr>
-                                        <td class="table-cell">{{ $date[$resultIndex] }}</td>
-                                        <td class="table-cell">{{ number_format($array[$index], 2) }}</td>
-                                        <td class="table-cell">
+                                        <td class="table-cell w-2/12">{{ $date[$resultIndex] }}</td>
+                                        <td class="table-cell w-1/12">{{ number_format($array[$index], 1) }}／5.0</td>
+                                        <td class="table-cell w-9/12">
                                             <div class="accordion-content-detail">
                                                 @if ($array[$index] > 3)
                                                     {!! $attributeDescriptions[$name]['excellent'] !!}
@@ -358,7 +454,10 @@
                 </div>
             @endforeach
         </div>
-        <div class="mb-5">
+
+
+        </div>
+
         </div>
 
         <link rel="stylesheet"
@@ -405,14 +504,45 @@
                     labels: attribution,
                     datasets: datasetsArray
                 },
+
                 options: {
                     responsive: true,
+                    elements: {
+                        line: {
+                            borderWidth: 2,
+
+                        },
+                        point: {
+                            radius: 3, // ポイントの大きさ
+                            borderWidth: 4,
+                            backgroundColor: 'rgba(255, 99, 132, 1)',
+                            borderColor: '#fff',
+                        },
+                    },
                     scales: {
                         r: {
                             suggestedMin: 0,
                             suggestedMax: 5,
+                            grid: {
+                                color: 'rgba(50, 50, 50, 0.2)',
+                                borderWidth: 0.1,
+                            },
+                            angleLines: {
+                                color: 'rgba(50, 50, 50, 0.3)',
+                                lineWidth: 1.5,
+                            },
+                            pointLabels: {
+                                fontSize: 20,
+                                fontColor: 'rgba(50, 50, 50, 1)',
+                            },
                         }
-                    }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                    },
+
                 }
             });
 

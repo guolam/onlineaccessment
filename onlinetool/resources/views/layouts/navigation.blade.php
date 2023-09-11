@@ -80,6 +80,10 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('ホーム') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('summary')" :active="request()->routeIs('summary')">
+                {{ __('項目解説') }}
+            </x-responsive-nav-link>
+
         </div>
 
         <!-- Responsive Settings Options -->

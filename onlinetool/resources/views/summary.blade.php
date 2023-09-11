@@ -16,6 +16,7 @@
         display: none;
         padding: 10px;
         background-color: white;
+        border: 1px solid #ccc;
     }
 
     /* アクティブなアコーディオンのスタイル */
@@ -30,8 +31,7 @@
             <p class="text-center text-lg font-semibold">アセスメントツール測定能力の定義</p>
 
             <div class="mt-4">
-                {{-- <h3 class="text-lg font-semibold">主な結果</h3>
-                <p class="mt-2">各項目の解釈</p> --}}
+
                 <div class="mt-2">
                     <h3 class="text-lg font-semibold">
                     </h3>
@@ -40,7 +40,12 @@
 
                     {{-- 自己認識 --}}
                     <div class="mt-2">
-                        <button class="text-lg font-semibold accordion">自己認識（Self-awareness）
+
+                        <button class="text-base font-semibold flex items-center justify-between accordion">
+                            <span>自己認識（Self-awareness）</span>
+                            <span class="material-symbols-outlined">
+                                expand_circle_down
+                            </span>
                         </button>
                         <div class="panel">
                             <ol>
@@ -136,7 +141,12 @@
 
                     {{-- 自己肯定感 --}}
                     <div class="mt-2">
-                        <button class="text-lg font-semibold accordion">自己肯定感（Self-esteem）
+
+                        <button class="text-base font-semibold flex items-center justify-between accordion">
+                            <span>自己肯定感（Self-esteem）</span>
+                            <span class="material-symbols-outlined">
+                                expand_circle_down
+                            </span>
                         </button>
                         <div class="panel">
                             <ol>
@@ -252,8 +262,13 @@
 
                     {{-- コミュニケーション力 --}}
                     <div class="mt-2">
-                        <button class="text-lg font-semibold accordion">コミュニケーション力（Communication Skills）
+                        <button class="text-base font-semibold flex items-center justify-between accordion">
+                            <span>コミュニケーション力（Communication Skills）</span>
+                            <span class="material-symbols-outlined">
+                                expand_circle_down
+                            </span>
                         </button>
+
                         <div class="panel">
                             <ol>
                                 <li>
@@ -352,7 +367,11 @@
 
                     {{-- 精神回復力 --}}
                     <div class="mt-2">
-                        <button class="text-lg font-semibold accordion">精神回復力（Resilience）
+                        <button class="text-base font-semibold flex items-center justify-between accordion">
+                            <span>精神回復力（Resilience）</span>
+                            <span class="material-symbols-outlined">
+                                expand_circle_down
+                            </span>
                         </button>
                         <div class="panel">
                             <ol>
@@ -442,8 +461,13 @@
 
                     {{-- 問題解決力 --}}
                     <div class="mt-2">
-                        <button class="text-lg font-semibold accordion">問題解決力 (Problem Solving Skills)
+                        <button class="text-base font-semibold flex items-center justify-between accordion">
+                            <span>問題解決力 (Problem Solving Skills)</span>
+                            <span class="material-symbols-outlined">
+                                expand_circle_down
+                            </span>
                         </button>
+
                         <div class="panel">
                             <ol>
                                 <li>
@@ -542,8 +566,13 @@
 
                     {{-- 問題焦点型 --}}
                     <div class="mt-2">
-                        <button class="text-lg font-semibold accordion">問題焦点型(Promblem Focus)
+                        <button class="text-base font-semibold flex items-center justify-between accordion">
+                            <span>問題焦点型(Promblem Focus)</span>
+                            <span class="material-symbols-outlined">
+                                expand_circle_down
+                            </span>
                         </button>
+
                         <div class="panel">
                             <ol>
                                 <li>
@@ -624,8 +653,13 @@
 
                     {{-- 時間的展望 --}}
                     <div class="mt-2">
-                        <button class="text-lg font-semibold accordion">時間的展望（Time Perspective）
+                        <button class="text-base font-semibold flex items-center justify-between accordion">
+                            <span>時間的展望（Time Perspective）</span>
+                            <span class="material-symbols-outlined">
+                                expand_circle_down
+                            </span>
                         </button>
+
                         <div class="panel">
                             <ol>
                                 <li>
@@ -731,6 +765,11 @@
     </div>
 </x-app-layout>
 
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet" href="{{ asset('/assets/css/result.css') }}" />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
