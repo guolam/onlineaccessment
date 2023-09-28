@@ -44,12 +44,7 @@
                                 <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                                     href="{{ route('login') }}">ログイン</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li class="flex items-center">
-                                    <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                                        href="{{ route('register') }}">登録</a>
-                                </li>
-                            @endif
+
                         @endauth
                 @endif
             </div>
@@ -63,19 +58,23 @@
             <div class="container relative mx-auto">
                 <div class="items-center flex flex-wrap">
                     <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                        <div class="pr-12">
+                        <div class="px-5">
                             <h1 class="text-white font-semibold text-5xl">
-                                自分の実力を見る
+                                今の実力を15分で測定
                             </h1>
-                            <p class="mt-4 text-lg text-gray-300">
-                                ご自身のビジネス力を可視化し、
+                            <p class="mt-8 text-lg text-gray-300">
+                                株式会社OnLine X 九州産業大学
+                                産学連携プロジェクトから開発した<br>アセスメントツール<br>
+                                <br>
+
+                                ご自身のビジネス力を可視化し、<br>
                                 どれくらいのビジネス力があるのかを知ることができます。
                             </p>
                         </div>
-                        <div class="mt-8">
-                            <a href="{{ route('register') }}"
-                                class="bg-blue-500 hover:bg-blue-900 text-white font-bold py-5 px-5 rounded">
-                                無料　15分で簡単診断
+                        <div class="mt-12">
+                            <a href="https://onlinerevo.jp/p/r/pr5z7nvc"
+                                class="bg-blue-500 hover:bg-blue-900 text-white font-bold py-4 px-5 rounded">
+                                今すぐ診断
                             </a>
                         </div>
                     </div>
@@ -288,15 +287,11 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap">
                 <div class="w-full lg:w-6/12 px-4">
-                    {{-- <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
-                    <h5 class="text-lg mt-0 mb-2 text-gray-700">
-                        Find us on any of these platforms, we respond 1-2 business days.
-                    </h5> --}}
                     <div class="mt-6">
                         <button
                             class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                             type="button"><a href="https://recurrent-edu.jp/"> <i
-                                    class="flex fa fa-home"></i></i></a></button>
+                                    class="flex fa fa-home"></i></a></button>
                         <button
                             class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                             type="button"><a href="https://www.facebook.com/online.co.ltd">
@@ -308,60 +303,36 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-6/12 px-4">
-                    <div class="flex flex-wrap items-top mb-6">
-                        <div class="w-full lg:w-4/12 px-4 ml-auto">
-                            {{-- <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Useful Links</span> --}}
-                            {{-- <ul class="list-unstyled">
-                                <li>
-                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="https://www.creative-tim.com/presentation">About Us</a>
-                                </li>
-                                <li>
-                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="https://blog.creative-tim.com">Blog</a>
-                                </li>
-                                <li>
-                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="https://www.github.com/creativetimofficial">Github</a>
-                                </li>
-                                <li>
-                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="https://www.creative-tim.com/bootstrap-themes/free">Free Products</a>
-                                </li>
-                            </ul> --}}
-                        </div>
-                        <div class="w-full lg:w-4/12 px-4">
-                            <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Law and
-                                Privacy</span>
-                            <ul class="list-unstyled">
+                    <div class="w-full lg:w-4/12 px-4">
 
-                                <li>
-                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="https://recurrent-edu.jp/law/">特定商取引法に基づく表記</a>
-                                </li>
-                                <li>
-                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="https://recurrent-edu.jp/privacy/">個人情報保護方針</a>
-                                </li>
-                                <li>
-                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="https://recurrent-edu.jp/terms/">免責事項・利用規約</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                    href="https://recurrent-edu.jp/law/">特定商取引法に基づく表記</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                    href="https://recurrent-edu.jp/privacy/">個人情報保護方針</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                    href="https://recurrent-edu.jp/terms/">免責事項・利用規約</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <hr class="my-6 border-gray-400" />
-            <div class="flex flex-wrap items-center md:justify-between justify-center">
-                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-                    <div class="text-sm text-gray-600 font-semibold py-1">
-                        Copyright © 2023
-                        <a href="https://recurrent-edu.jp/" class="text-gray-600 hover:text-gray-900">OnLine Inc.
-                        </a>.
-                    </div>
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div class="flex flex-wrap items-center md:justify-between justify-center">
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                <div class="text-sm text-gray-600 font-semibold py-1">
+                    Copyright © 2023
+                    <a href="https://recurrent-edu.jp/" class="text-gray-600 hover:text-gray-900">OnLine Inc.
+                    </a>.
                 </div>
             </div>
+        </div>
         </div>
     </footer>
 

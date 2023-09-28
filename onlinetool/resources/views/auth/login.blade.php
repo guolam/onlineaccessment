@@ -39,13 +39,13 @@
                 </a>
             @endif --}}
 
-            <div class="ml-4">
+            {{-- <div class="ml-4">
                 <a href="{{ route('register') }}"
                     class="bg-blue-500 hover:bg-blue-900 inline-flex items-center px-4 py-2  border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest transition ease-in-out duration-150">
                     {{ __('まだ登録されていない方はこちら') }}&nbsp;
                     <iconify-icon icon="gis:arrow" style="color: white;"></iconify-icon>
                 </a>
-            </div>
+            </div> --}}
 
             <x-primary-button class="ml-3">
                 {{ __('ログイン') }}
