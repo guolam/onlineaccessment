@@ -68,7 +68,13 @@
                                 <br>
 
                                 ご自身のビジネス力を可視化し、<br>
-                                どれくらいのビジネス力があるのかを知ることができます。
+                                どれくらいのビジネス力があるのかを知ることができます。<br>
+                                <br>
+                                今すぐ診断をして、あなたのビジネス力を知りましょう！<br>
+                                今だけ<strong>500円(税込)</strong>で提供いたします。
+
+
+
                             </p>
                         </div>
                         <div class="mt-12">
@@ -77,6 +83,8 @@
                                 今すぐ診断
                             </a>
                         </div>
+
+
                     </div>
                 </div>
             </div>
@@ -165,14 +173,14 @@
                     </div>
                     <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
                         <div
-                            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+                            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blue-400">
                             <img alt="hero" src="{{ asset('/assets/img/tool.jpg') }}"
                                 class="w-full align-middle rounded-t-lg" />
                             <blockquote class="relative p-8 mb-4">
                                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 583 95" class="absolute left-0 w-full block"
                                     style="height: 95px; top: -94px;">
-                                    <polygon points="-30,95 583,95 583,65" class="text-pink-600 fill-current">
+                                    <polygon points="-30,95 583,95 583,65" class="text-blue-400 fill-current">
                                     </polygon>
                                 </svg>
                                 <h4 class="text-xl font-bold text-white">
@@ -205,10 +213,7 @@
                     </div>
                     <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
                         <div class="md:pr-12">
-                            {{-- <div
-                                class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
-                                <i class="fas fa-rocket text-xl"></i>
-                            </div> --}}
+
                             <h3 class="text-3xl font-semibold">株式会社OnLine X 九州産業大学</h3>
                             <p class="mt-4 text-lg leading-relaxed text-gray-600">
                                 <strong clss="text-bold">■アセスメントツールの詳細</strong><br>
@@ -221,7 +226,7 @@
                                     <div class="flex items-center">
                                         <div>
                                             <span
-                                                class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                                                class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3"><i
                                                     class="fas fa-fingerprint"></i></span>
                                         </div>
                                         <div>
@@ -235,7 +240,7 @@
                                     <div class="flex items-center">
                                         <div>
                                             <span
-                                                class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                                                class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-400 bg-blue-200 mr-3"><i
                                                     class="fab fa-html5"></i></span>
                                         </div>
                                         <div>
@@ -247,7 +252,7 @@
                                     <div class="flex items-center">
                                         <div>
                                             <span
-                                                class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                                                class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-400 bg-blue-200 mr-3"><i
                                                     class="far fa-paper-plane"></i></span>
                                         </div>
                                         <div>
