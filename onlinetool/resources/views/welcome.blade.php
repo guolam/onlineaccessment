@@ -80,7 +80,7 @@
                         <div class="mt-12">
                             <a href="https://onlinerevo.jp/p/r/pr5z7nvc"
                                 class="bg-blue-500 hover:bg-blue-900 text-white font-bold py-4 px-5 rounded">
-                                今すぐ診断
+                                今すぐ申し込む
                             </a>
                         </div>
 
