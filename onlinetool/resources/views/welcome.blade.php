@@ -197,6 +197,32 @@
                 </div>
             </div>
         </section>
+
+        <section class="pt-20 pb-36">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-center text-center mb-12">
+                    <div class="w-full lg:w-6/12 px-6">
+                        <h2 class="text-4xl font-semibold mb-6">アセスメントツールを通して<br>
+                            ビジネス力を数字化します</h2>
+                        <p class="text-lg leading-relaxed m-4 text-gray-600">
+                            レダーチャートで、自分のビジネス力を可視化にし、<br>
+                            各項目の詳細、点数を知ることができます。
+                            <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap">
+                    <div class="w-full mb-12 px-4">
+                        <div class="px-5">
+                            <img alt="株式会社OnLineアセスメントツール内容" src="./assets/img/pic1.png"
+                                class="shadow-lg  max-w-full mx-auto" style="max-height:900px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <section class="relative py-20">
             <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
                 style="height: 80px;">
