@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\AnalysisController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ManagementController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+use Google\Service\Analytics\Resource\Management;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,8 +54,39 @@ Route::middleware('auth')->group(function () {
   // Route::get('/analysis', [AnalysisController::class, 'show'])->name('analysis');
 });
 
+
 Route::get('/admin', function () {
   return view('dashboard.admin');
+});
+Route::group(['prefix' => 'admin'], function () {
+  // 登録
+  Route::get('register', [AdminController::class, 'create'])
+    ->name('admin.register');
+
+  Route::post('register', [AdminController::class, 'store']);
+
+  // ログイン
+  Route::get('login', [AdminController::class, 'showLoginPage'])
+    ->name('admin.login');
+
+  Route::post('login', [AdminController::class, 'login']);
+
+  // 以下の中は認証必須のエンドポイント
+  Route::middleware(['auth:admin'])->group(function () {
+    // ダッシュボード
+    Route::get('dashboard', fn () => view('admin.dashboard'))
+      ->name('admin.dashboard');
+
+    // ログアウト
+    Route::post('logout', [AdminController::class, 'logout'])
+      ->name('admin.logout');
+
+    Route::get('index', [ManagementController::class, 'index'])->name('admin.index');
+    Route::get('manage', [ManagementController::class, 'manage'])->name('admin.manage');
+    Route::get('result/{user_id}', [ManagementController::class, 'result'])->name('admin.result');
+    // user_idとcountを受け取る
+    Route::get('analysis/{user_id}/{count}', [ManagementController::class, 'analysis'])->name('admin.analysis');
+  });
 });
 
 Route::get('/online_admin', function () {
@@ -64,5 +99,8 @@ Route::middleware(['auth', 'verified'])->get('/summary', function () {
 })->name('summary');
 
 
+Route::get('/register/{uuid}', [RegisteredUserController::class, 'create'])
+  ->middleware('guest')
+  ->name('register');
 
 require __DIR__ . '/auth.php';
