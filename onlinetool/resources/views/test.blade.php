@@ -17,50 +17,47 @@
     </x-slot>
 
     <body>
-        @if ($questions)
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 mb-2 mx-4 md:mx-0">
-                <div class="mb-2 mx-auto md:mx-0 md:text-center">
-                    <x-image.time class="mx-auto mb-2" />
-                    <p class="text-center">0分以内に完成してください</p>
-                </div>
-
-                <div class="mb-2 mx-auto md:mx-0 md:text-center">
-                    <x-image.chokan class="mx-auto mb-2" />
-                    <p class="text-center">直感で回答してください。</p>
-                </div>
-
-                <div class="mb-2 mx-auto md:mx-0 md:text-center">
-                    <x-image.onetime class="mx-auto mb-2" />
-                    <p class="text-center">一回のみ押してください</p>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 mb-2 mx-4 md:mx-0">
+            <div class="mb-2 mx-auto md:mx-0 md:text-center">
+                <x-image.time class="mx-auto mb-2" />
+                <p class="text-center">0分以内に完成してください</p>
             </div>
 
-            @auth
-                <form method="POST" action="{{ route('test.submit') }}">
-                    @csrf
+            <div class="mb-2 mx-auto md:mx-0 md:text-center">
+                <x-image.chokan class="mx-auto mb-2" />
+                <p class="text-center">直感で回答してください。</p>
+            </div>
 
-                    <div class="progress-bar">
-                        <div class="progress" id="progress"></div>
-                        <div class="progress-marker"></div>
-                        <h4 class="progress-percentage" id="progressPercentage"></h4>
-                    </div>
+            <div class="mb-2 mx-auto md:mx-0 md:text-center">
+                <x-image.onetime class="mx-auto mb-2" />
+                <p class="text-center">一回のみ押してください</p>
+            </div>
+        </div>
 
-                    <div class="quiz-main-inner" id="quizContainer"></div>
-                    <div class="center-align my-5">
-                        <button id="submitButton" class="button center-align hidden">送信</button>
-                    </div>
+        @auth
+            <form method="POST" action="{{ route('test.submit') }}">
+                @csrf
 
-                    {{-- <div class="center-align">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                    <div class="progress-marker"></div>
+                    <h4 class="progress-percentage" id="progressPercentage"></h4>
+                </div>
+
+                <div class="quiz-main-inner" id="quizContainer"></div>
+                <div class="center-align my-5">
+                    <button id="submitButton" class="button center-align hidden">送信</button>
+                </div>
+
+                {{-- <div class="center-align">
             <button id="answerButton" @if ($ticket->remaining_tickets > 0) onclick="submitAnswer()" @else disabled @endif>
                 テストボタン
             </button>
         </div> --}}
 
-                </form>
-            @endauth
-        @else
-            <div>3回までしか回答できません。</div>
-        @endif
+            </form>
+        @endauth
+
 
         <style>
             .hidden {

@@ -40,10 +40,6 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'admin' => [ // 管理者用Guard
-            'driver' => 'session',
-            'provider' => 'admins',
-        ],
     ],
 
     /*
@@ -68,10 +64,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-        'admins' => [ // 管理者用Provider
-            'driver' => 'eloquent',
-            'model' => App\Models\Admin::class,
-        ],
+
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'users',
+        // ],
     ],
 
     /*
@@ -100,12 +97,6 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-        'admins' => [
-            'provider' => 'admins',
-            'table' => 'admin_password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ]
     ],
 
     /*

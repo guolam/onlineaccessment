@@ -16,14 +16,8 @@ class TestController extends Controller
    */
   public function index()
   {
-    $max_count = Answer::where('user_id', Auth::id())->max('count') ?? 0;
-    // 3回まで無料でできるようにする
-    if ($max_count < 2) {
-      // Questionから170個の質問をランダムに取得
-      $questions = Question::inRandomOrder()->limit(170)->get();
-    } else {
-      $questions = null;
-    }
+    // Questionから170個の質問をランダムに取得
+    $questions = Question::inRandomOrder()->limit(50)->get();
     return view('test', compact('questions'));
   }
 

@@ -47,8 +47,6 @@
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
-        <input type="hidden" name="admin" value="{{ $admin }}">
-
 
         <div class="flex items-center justify-end mt-4">
 
