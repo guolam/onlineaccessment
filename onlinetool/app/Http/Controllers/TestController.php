@@ -17,7 +17,7 @@ class TestController extends Controller
   public function index()
   {
     // Questionから170個の質問をランダムに取得
-    $questions = Question::inRandomOrder()->limit(50)->get();
+    $questions = Question::inRandomOrder()->limit(170)->get();
     return view('test', compact('questions'));
   }
 
