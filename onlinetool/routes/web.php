@@ -99,7 +99,7 @@ Route::middleware(['auth', 'verified'])->get('/summary', function () {
 })->name('summary');
 
 
-Route::get('/register/{uuid}', [RegisteredUserController::class, 'create'])
+Route::get('/register/{uuid?}', [RegisteredUserController::class, 'create'])
   ->middleware('guest')
   ->name('register');
 
