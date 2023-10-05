@@ -19,7 +19,7 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    public function create($uuid)
+    public function create($uuid = null)
     {
         $admin = $uuid;
         return view('auth.register', compact('admin'));
@@ -38,13 +38,13 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $uuid = $request->admin;
+        $uuid = $request->admin ?? null;
         $admin = Admin::where('uuid', $uuid)->first();
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'admin_id' => $admin->id,
+            'admin_id' => $admin->id ?? null,
             'password' => Hash::make($request->password),
         ]);
 
