@@ -20,7 +20,7 @@ class TestController extends Controller
     // 3回まで無料でできるようにする
     if ($max_count < 2) {
       // Questionから170個の質問をランダムに取得
-      $questions = Question::inRandomOrder()->limit(170)->get();
+      $questions = Question::inRandomOrder()->limit(5)->get();
     } else {
       $questions = null;
     }

@@ -59,7 +59,15 @@
                 </form>
             @endauth
         @else
-            <div>3回までしか回答できません。</div>
+            <div class="mt-8 text-center flex flex-col justify-center">
+                <img class="mx-auto my-auto" width=100 alt="連絡" src="{{ asset('/assets/img/step.png') }}">
+                <p class="text-center">
+                    2回までしか測定できません。<br>
+                    引き続き、測定したい場合は、当事務局までご連絡ください.
+                </p>
+                <a class="text-blue-500 underline" href="https://recurrent-edu.jp/contact/">リンクはこちら</a>
+
+            </div>
         @endif
 
         <style>
