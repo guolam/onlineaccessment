@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" href="./assets/img/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+    <link rel="apple-touch-icon" sizes="100x100" href="./assets/img/apple-icon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
     <title>株式会社OnLine | アセスメントツール</title>
@@ -21,7 +22,7 @@
             <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                 <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
                     href="https://recurrent-edu.jp/"><x-application-logo-w
-                        class="w-10 h-10 fill-current text-gray-500" />
+                        class="w-12 h-12 fill-current text-gray-500" />
 
                 </a><button
                     class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -62,10 +63,10 @@
                             <h1 class="text-white font-semibold text-5xl">
                                 今の実力を15分で測定
                             </h1>
-                            <p class="mt-8 text-lg text-gray-300">
-                                株式会社OnLine X 九州産業大学
-                                産学連携プロジェクトから開発した<br>アセスメントツール<br>
-                                <br>
+                            <p class="mt-8 text-lg text-white">
+                                <span class="text-2xl font-semibold">株式会社OnLine X 九州産業大学
+                                    産学連携プロジェクトから<br>開発したアセスメントツール<br>
+                                    <br></span>
 
                                 ご自身のビジネス力を可視化し、<br>
                                 どれくらいのビジネス力があるのかを知ることができます。<br>
@@ -92,23 +93,23 @@
                 style="height: 70px;">
                 <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg"
                     preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-                    <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+                    <polygon class="bg-sky-100 fill-current" points="2560 0 2560 100 0 100"></polygon>
                 </svg>
             </div>
         </div>
-        <section class="pb-20 bg-gray-300 -mt-24">
+        <section class="pb-20 bg-sky-100 -mt-24">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap">
-                    <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                    <div class="w-full md:w-4/12 px-4 text-center">
                         <div
                             class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                             <div class="px-4 py-5 flex-auto">
                                 <div
-                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                                    <i class="fas fa-award"></i>
+                                    class="text-white p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-red-400">
+                                    <i class="fas fa-award fa-2x" style=""></i>
                                 </div>
-                                <h6 class="text-xl font-semibold">適切なキャリア選択のサポート</h6>
-                                <p class="mt-2 mb-4 text-gray-600">
+                                <h6 class="text-xl font-semibold text-red-400">適切なキャリア選択のサポート</h6>
+                                <p class="mt-2 mb-4 text-gray-600 text-left">
                                     自己理解が深まることで、個人のスキル、興味、価値観に合ったキャリアパスを選択する際により良い判断が可能となります。ツールの結果を通じて、ビジネスパーソンは自身の強みや弱みを把握し、それに基づいて将来の職業的な方向性を見極めることができるでしょう。これによって、適切な職種や業界を選択する際の迷いや失敗を減少させる助けとなります。
                                 </p>
                             </div>
@@ -119,26 +120,26 @@
                             class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                             <div class="px-4 py-5 flex-auto">
                                 <div
-                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
-                                    <i class="fas fa-retweet"></i>
+                                    class="text-white p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-blue-400">
+                                    <i class="fas fa-retweet fa-2x"></i>
                                 </div>
-                                <h6 class="text-xl font-semibold">効果的なコミュニケーションと協力関係の構築</h6>
-                                <p class="mt-2 mb-4 text-gray-600">
+                                <h6 class="text-xl font-semibold text-blue-400">効果的なコミュニケーションと協力関係の構築</h6>
+                                <p class="mt-2 mb-4 text-gray-600 text-left">
                                     自己理解が進むと、他人とのコミュニケーションにおいても大きな優位性を持つことができます。ビジネスパーソンが自分のコミュニケーションスタイル、意思決定方法、ストレスへの対処法を理解すれば、同僚やクライアントとの対話が円滑に進み、誤解や摩擦を減少させることができます。また、自己理解を深めることで、チーム内での協力関係の構築やリーダーシップスキルの向上にも寄与します。
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+                    <div class="w-full md:w-4/12 px-4 text-center">
                         <div
                             class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                             <div class="px-4 py-5 flex-auto">
                                 <div
-                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
-                                    <i class="fas fa-fingerprint"></i>
+                                    class="text-white p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-green-400">
+                                    <i class="fas fa-fingerprint fa-2x"></i>
                                 </div>
-                                <h6 class="text-xl font-semibold">個人の成長と能力向上の促進</h6>
-                                <p class="mt-2 mb-4 text-gray-600">
+                                <h6 class="text-xl font-semibold text-green-400">個人の成長と能力向上の促進</h6>
+                                <p class="mt-2 mb-4 text-gray-600 text-left">
                                     自己理解を深めるプロセスは、個人の成長と能力向上を助ける重要なステップです。ビジネスパーソンが自分の強みや成長の余地を把握すれば、継続的な学習やスキルの向上に焦点を当てることができます。自己理解は、目標設定や自己啓発の方針を効果的に導く手助けとなり、結果として個人の職業的な成功に寄与します。
                                 </p>
                             </div>
@@ -148,35 +149,41 @@
                 <div class="flex flex-wrap items-center mt-32">
                     <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
                         <div
-                            class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
+                            class="text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blue-500">
                             <i class="fas fa-user-friends text-xl"></i>
                         </div>
-                        <h3 class="text-3xl mb-2 font-semibold leading-normal">
-                            診断ツールだからこそできること
-                        </h3>
-                        <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                            <strong class="font-bold">自己認識の向上:</strong><br>
+                        <div class="border-b-2 border-black">
+                            <h3 class="text-3xl mb-2 font-semibold leading-normal">
+                                診断ツールだからこそできること
+                            </h3>
+                        </div>
+                        <p class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-700">
+                            <strong class="font-bold text-2xl">自己認識の向上:</strong><br>
                             診断ツールは個人に対して客観的な情報を提供することができます。自分自身のスキル、特性、価値観などについて深く理解することで、自己認識が向上します。これにより、自分の強みと弱みを把握し、自身のキャリア目標に合わせて成長戦略を立てることができます。
                         </p>
                         <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-                            <strong class="font-bold">効果的なパーソナルブランディング:</strong><br>
+                            <strong class="font-bold text-2xl">効果的なパーソナルブランディング:</strong><br>
                             ビジネス環境では、個人のブランドイメージが重要です。診断ツールの結果を活用することで、自身の強みや特徴を明確にし、他人とのコミュニケーションやキャリア展望を効果的に伝えることができます。これにより、自己アピールが向上し、プロフェッショナルな印象を残すことができます。
                         </p>
                         <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-                            <strong class="font-bold">適切な成長戦略の策定:</strong><br>
+                            <strong class="font-bold text-2xl">適切な成長戦略の策定:</strong><br>
                             診断ツールによって得られるデータや洞察は、個人の成長戦略の策定に役立ちます。自身のスキルや特性の分析に基づいて、どの分野でスキルを向上させるべきか、どのようなトレーニングや学習が適しているかを把握できます。これにより、効果的なスキルアッププランを立て、職業的な成長を促進することが可能です。
 
                             これらのポイントを活かして、ビジネスパーソン向けの診断ツールを開発し、個人の自己理解とキャリアの向上に貢献することができるでしょう。
                         </p>
-                        <a href="{{ route('login') }}" class="font-bold text-gray-800 mt-8">今すぐ診断&nbsp;<iconify-icon
-                                icon="uil:angle-right-b" style="color: #222;"></iconify-icon></a>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full">
+                            <a href="{{ route('login') }}">
+                                今すぐ診断&nbsp;<iconify-icon icon="uil:angle-right-b" style="color: #fff;"></iconify-icon>
+                            </a>
+                        </button>
+
                     </div>
                     <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
                         <div
-                            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blue-400">
+                            class="relative flex flex-col min-w-0 break-words bg-blue-400 w-full mb-6 shadow-lg rounded-lg bg-blue-400">
                             <img alt="hero" src="{{ asset('/assets/img/tool.jpg') }}"
                                 class="w-full align-middle rounded-t-lg" />
-                            <blockquote class="relative p-8 mb-4">
+                            <blockquote class="relative p-8 mb-4 bg-blue-400">
                                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 583 95" class="absolute left-0 w-full block"
                                     style="height: 95px; top: -94px;">
@@ -198,12 +205,13 @@
             </div>
         </section>
 
-        <section class="pt-20 pb-36">
-            <div class="container mx-auto px-4">
+        <section class="pt-20 pb-36 bg-slate-50">
+            <div class="container mx-auto px-4 ">
                 <div class="flex flex-wrap justify-center text-center mb-12">
                     <div class="w-full lg:w-6/12 px-6">
-                        <h2 class="text-4xl font-semibold mb-6">アセスメントツールを通して<br>
-                            ビジネス力を数字化します</h2>
+                        <h2 class="text-3xl font-semibold mb-6 leading-normal text-blue-500">アセスメントツールを通して<br>
+                            ビジネス力を数字化します
+                        </h2>
                         <p class="text-lg leading-relaxed m-4 text-gray-600">
                             レダーチャートで、自分のビジネス力を可視化にし、<br>
                             各項目の詳細、点数を知ることができます。
@@ -307,12 +315,12 @@
 
 
     </main>
-    <footer class="relative bg-gray-300 pt-8 pb-6">
+    <footer class="relative bg-blue-500 pt-8 pb-6">
         <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
             style="height: 80px;">
             <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-                <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+                <polygon class="text-blue-500 fill-current" points="2560 0 2560 100 0 100"></polygon>
             </svg>
         </div>
         <div class="container mx-auto px-4">
@@ -338,15 +346,15 @@
 
                         <ul class="list-unstyled">
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                <a class="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
                                     href="https://recurrent-edu.jp/law/">特定商取引法に基づく表記</a>
                             </li>
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                <a class="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
                                     href="https://recurrent-edu.jp/privacy/">個人情報保護方針</a>
                             </li>
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                <a class="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
                                     href="https://recurrent-edu.jp/terms/">免責事項・利用規約</a>
                             </li>
                         </ul>
@@ -354,12 +362,12 @@
                 </div>
             </div>
         </div>
-        <hr class="my-6 border-gray-400" />
+        <hr class="my-6 border-white" />
         <div class="flex flex-wrap items-center md:justify-between justify-center">
             <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-                <div class="text-sm text-gray-600 font-semibold py-1">
+                <div class="text-sm text-white font-semibold py-1">
                     Copyright © 2023
-                    <a href="https://recurrent-edu.jp/" class="text-gray-600 hover:text-gray-900">OnLine Inc.
+                    <a href="https://recurrent-edu.jp/" class="text-white hover:text-slate-200">OnLine Inc.
                     </a>.
                 </div>
             </div>
