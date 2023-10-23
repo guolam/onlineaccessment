@@ -60,11 +60,11 @@
                 <div class="items-center flex flex-wrap">
                     <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                         <div class="px-5">
-                            <h1 class="text-white font-semibold text-5xl">
+                            <h1 class="text-white font-bold text-5xl mt-12" style="white-space: nowrap;">
                                 今の実力を15分で測定
                             </h1>
-                            <p class="mt-8 text-lg text-white">
-                                <span class="text-2xl font-semibold">株式会社OnLine X 九州産業大学
+                            <p class="mt-8 text-lg text-white" style="white-space: nowrap;">
+                                <span class="text-2xl font-semibold">株式会社OnLine X 九州産業大学<br>
                                     産学連携プロジェクトから<br>開発したアセスメントツール<br>
                                     <br></span>
 
@@ -73,12 +73,9 @@
                                 <br>
                                 今すぐ診断をして、あなたのビジネス力を知りましょう！<br>
                                 今だけ<strong>550円(税込)</strong>で提供いたします。
-
-
-
                             </p>
                         </div>
-                        <div class="mt-12">
+                        <div class="my-12">
                             <a href="https://onlinerevo.jp/p/r/pr5z7nvc"
                                 class="bg-blue-500 hover:bg-blue-900 text-white font-bold py-4 px-5 rounded">
                                 今すぐ申し込む
@@ -254,7 +251,6 @@
                             </p><br>
                             ＜特徴＞ <br>
                             </p>
-
                             <ul class="list-none mt-6">
                                 <li class="py-2">
                                     <div class="flex items-center">
@@ -347,7 +343,7 @@
                         <ul class="list-unstyled">
                             <li>
                                 <a class="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                    href="https://recurrent-edu.jp/law/">特定商取引法に基づく表記</a>
+                                    href="https://recurrent-edu.jp/law/" style="white-space: nowrap;">特定商取引法に基づく表記</a>
                             </li>
                             <li>
                                 <a class="text-white hover:text-gray-900 font-semibold block pb-2 text-sm"
