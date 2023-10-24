@@ -7,8 +7,10 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\AnalysisController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ManagementController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use Google\Service\Analytics\Resource\Management;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -102,5 +104,7 @@ Route::middleware(['auth', 'verified'])->get('/summary', function () {
 Route::get('/register/{uuid?}', [RegisteredUserController::class, 'create'])
   ->middleware('guest')
   ->name('register');
+
+Route::get("sitemap", [SitemapController::class, "index"])->name("sitemap");
 
 require __DIR__ . '/auth.php';
