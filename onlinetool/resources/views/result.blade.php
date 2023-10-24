@@ -10,7 +10,7 @@
             'Selfunderstand' => '自己認知',
             'Communication' => 'コミュニケーション力',
         ];
-        
+
         $attributeDescriptions = [
             'Problemsolving' => [
                 'excellent' => '＜問題解決力の高い人の特徴＞<br>
@@ -239,6 +239,18 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="{{ asset('js/result.js') }}"></script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RR7X2WCJR5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RR7X2WCJR5');
+    </script>
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">

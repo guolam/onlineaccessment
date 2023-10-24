@@ -1,5 +1,5 @@
  @php
-     
+
      $attributeDescriptions = [
          'Problemsolving' => [
              'excellent' => '＜問題解決力の高い人の特徴＞<br>
@@ -221,6 +221,18 @@
          ],
      ];
  @endphp
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-RR7X2WCJR5"></script>
+ <script>
+     window.dataLayer = window.dataLayer || [];
+
+     function gtag() {
+         dataLayer.push(arguments);
+     }
+     gtag('js', new Date());
+
+     gtag('config', 'G-RR7X2WCJR5');
+ </script>
  <x-app-layout>
      <div class="p-4 bg-gray-100">
          <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">

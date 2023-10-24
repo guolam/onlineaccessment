@@ -8,6 +8,18 @@
         <link rel="stylesheet" href="{{ asset('assets/css/questionnaire.css') }}">
         <script src="{{ asset('assets/js/questionnaire.js') }}"></script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RR7X2WCJR5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RR7X2WCJR5');
+    </script>
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -50,12 +62,6 @@
                         <button id="submitButton" class="button center-align hidden">送信</button>
                     </div>
 
-                    {{-- <div class="center-align">
-            <button id="answerButton" @if ($ticket->remaining_tickets > 0) onclick="submitAnswer()" @else disabled @endif>
-                テストボタン
-            </button>
-        </div> --}}
-
                 </form>
             @endauth
         @else
@@ -81,20 +87,6 @@
 
     </body>
 
-    {{-- <script>
-        // 回答を送信する関数
-        function submitAnswer() {
-            // 回数券の数が0の場合は何もしない
-            if ({{ $ticket->remaining_tickets }} <= 0) {
-                return;
-            }
 
-            // 回答を送信する処理
-            // ...
-
-            // 回数券を1減らす（サーバーサイドでの減算も行う必要があります）
-            {{ $ticket->remaining_tickets }}--;
-        }
-    </script> --}}
 
 </x-app-layout>
