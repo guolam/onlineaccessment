@@ -5,14 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <link rel="icon" href="/logo/logo.svg" type="image/png">
     <link rel="apple-touch-icon" sizes="100x100" href="./assets/img/apple-icon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
-    <title>株式会社OnLine | アセスメントツール</title>
-    <link rel="icon" href="/logo/logo.svg" type="image/png">
+    <meta name="description"
+        content="今の実力を15分で測定。株式会社OnLine X 九州産業大学産学連携プロジェクトから開発したアセスメントツール。ご自身のビジネス力を可視化し、どれくらいのビジネス力があるのかを知ることができます。">
+    <meta name="keywords" content="ビジネス診断, アセスメントツール, 株式会社OnLine, 大人の非認知能力">
+    <title>株式会社OnLine | ビジネス力診断</title>
 
 </head>
 <!-- Google tag (gtag.js) -->
