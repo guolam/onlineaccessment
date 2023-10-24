@@ -11,6 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
+    <meta name="google-site-verification" content="Ar6l8Yj_RAoCqlcfTYIeAUi6fQUQs-bObBb5U6xUMgI" />
     <meta name="description"
         content="今の実力を15分で測定。株式会社OnLine X 九州産業大学産学連携プロジェクトから開発したアセスメントツール。ご自身のビジネス力を可視化し、どれくらいのビジネス力があるのかを知ることができます。">
     <meta name="keywords" content="ビジネス診断, アセスメントツール, 株式会社OnLine, 大人の非認知能力">
