@@ -1,7 +1,17 @@
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV5FXSYXJJ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-WV5FXSYXJJ');
+        </script>
         <div class="my-5 ml-12 mr-12">
             <div class="bg-gradient-to-r from-blue-200 to-blue-100 p-4 rounded-lg shadow-md">
                 <p class="text-blue-800 text-sm">

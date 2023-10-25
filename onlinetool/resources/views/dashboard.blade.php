@@ -4,8 +4,7 @@
             {{ __('ホーム') }}
         </h2>
     </x-slot>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RR7X2WCJR5"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV5FXSYXJJ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -14,7 +13,7 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'G-RR7X2WCJR5');
+        gtag('config', 'G-WV5FXSYXJJ');
     </script>
 
     <body>

@@ -1,4 +1,15 @@
 <x-guest-layout>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV5FXSYXJJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WV5FXSYXJJ');
+    </script>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
