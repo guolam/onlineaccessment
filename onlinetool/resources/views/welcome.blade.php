@@ -18,8 +18,8 @@
     <title>株式会社OnLine | ビジネス力診断</title>
 
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RR7X2WCJR5"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WV5FXSYXJJ"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -28,10 +28,8 @@
     }
     gtag('js', new Date());
 
-    gtag('config', 'G-RR7X2WCJR5');
+    gtag('config', 'G-WV5FXSYXJJ');
 </script>
-
-
 
 <body class="text-gray-800 antialiased">
     <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
