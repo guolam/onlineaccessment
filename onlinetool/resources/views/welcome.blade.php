@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="icon" href="/logo/logo.svg" type="image/png">
+    <link rel="icon" href="/logo/logo.jpg" type="image/png">
     <link rel="apple-touch-icon" sizes="100x100" href="./assets/img/apple-icon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,7 +16,6 @@
         content="今の実力を15分で測定。株式会社OnLine X 九州産業大学産学連携プロジェクトから開発したアセスメントツール。ご自身のビジネス力を可視化し、どれくらいのビジネス力があるのかを知ることができます。">
     <meta name="keywords" content="ビジネス診断, アセスメントツール, 株式会社OnLine, 大人の非認知能力">
     <title>株式会社OnLine | ビジネス力診断</title>
-
 </head>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV5FXSYXJJ"></script>
@@ -193,7 +192,7 @@
                     </div>
                     <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
                         <div
-                            class="relative flex flex-col min-w-0 break-words bg-blue-400 w-full mb-6 shadow-lg rounded-lg bg-blue-400">
+                            class="relative flex flex-col min-w-0 break-wordss w-full mb-6 shadow-lg rounded-lg bg-blue-400">
                             <img alt="hero" src="{{ asset('/assets/img/tool.jpg') }}"
                                 class="w-full align-middle rounded-t-lg" />
                             <blockquote class="relative p-8 mb-4 bg-blue-400">
