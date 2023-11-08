@@ -32,7 +32,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 mb-2 mx-4 md:mx-0">
                 <div class="mb-2 mx-auto md:mx-0 md:text-center">
                     <x-image.time class="mx-auto mb-2" />
-                    <p class="text-center">0分以内に完成してください</p>
+                    <p class="text-center">20分以内に完成してください</p>
                 </div>
 
                 <div class="mb-2 mx-auto md:mx-0 md:text-center">
