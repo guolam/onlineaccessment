@@ -32,21 +32,29 @@
                         <div class="my-2 font-bold">管理データ</div>
                     </div>
 
-                    <table class="table-auto">
+                    <table class="min-w-full bg-white border border-gray-300">
                         <thead>
-                            <tr class="mx-2">
-                                <th class="w-6/12">名前</th>
-                                <th class="w-6/12">メールアドレス</th>
+                            <tr class="bg-gray-100">
+                                <th class="py-2 px-4"></th>
+                                <th class="py-2 px-4">名前</th>
+                                <th class="py-2 px-4">メールアドレス</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @php
+                                $counter = 1;
+                            @endphp
                             @foreach (\App\Models\User::where('admin_id', Auth::guard('admin')->id())->get() as $user)
-                                <tr>
-                                    <td class="mx-2"> <a
-                                            href="{{ route('admin.result.show', ['userId' => $user->id]) }}">
-                                            {{ $user->name }}</a></td>
-                                    <td><a href="{{ route('admin.result.show', ['userId' => $user->id]) }}">
-                                            {{ $user->email }}</a></td>
+                                <tr class="{{ $counter % 2 === 0 ? 'bg-gray-50' : 'bg-white' }}">
+                                    <td class="text-center py-2 px-4">{{ $counter++ }}</td>
+                                    <td class="text-center py-2 px-4">
+                                        <a href="{{ route('admin.result.show', ['userId' => $user->id]) }}"
+                                            class=" underline underline-offset-2 justify-center hover:underline hover:text-blue-500">
+                                            {{ $user->name }}</a>
+                                    </td>
+                                    <td class="text-center py-2 px-4 text-center">
+                                        {{ $user->email }}
+                                    </td>
                             @endforeach
                             </tr>
                         </tbody>
