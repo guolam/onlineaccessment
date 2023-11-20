@@ -79,6 +79,9 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('dashboard', fn () => view('admin.dashboard'))
       ->name('admin.dashboard');
 
+    Route::get('/admin/result/{userId}', [TestController::class, 'showUserResults'])
+      ->name('admin.result.show');
+
     // ログアウト
     Route::post('logout', [AdminController::class, 'logout'])
       ->name('admin.logout');

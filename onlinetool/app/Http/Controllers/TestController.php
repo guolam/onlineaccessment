@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Answer;
 use App\Models\Attribution;
+use App\Models\User;
 use App\Models\Question;
 use Illuminate\Support\Facades\Auth;
 
@@ -101,6 +102,40 @@ class TestController extends Controller
     // $attributionsからnameのみを取得
     $attribution = $attributions->pluck('name');
     return view('result', compact('result', 'attribution', 'date'));
+  }
+
+  // Admin側の処理
+  public function showUserResults($userId)
+  {
+
+    $user = User::findOrFail($userId);
+
+    $max_count = Answer::where('user_id', $userId)->max('count');
+    $attributions = Attribution::all();
+    $result = [];
+    $date = [];
+
+    for ($i = 0; $i < $max_count; $i++) {
+      $array = [];
+      foreach ($attributions as $attribution) {
+        $answers = Answer::where([
+          ['user_id', $userId],
+          ['attribution_id', $attribution->id],
+          ['count', $i + 1]
+        ])->pluck('value');
+
+        $average = $answers->avg();
+        $array[] = $average;
+      }
+
+      $day = Answer::where('user_id', $userId)->where('count', $i + 1)->first()->created_at;
+      $day = $day->format('Y-m-d');
+      $date[] = $day;
+      $result[] = $array;
+    }
+
+    $attribution = $attributions->pluck('name');
+    return view('admin.result', compact('user', 'result', 'attribution', 'date'));
   }
 
   /**

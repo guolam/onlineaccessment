@@ -15,19 +15,42 @@
 
                     <div>{{ Auth::user()->name }}さん</div>
 
-
                     {{-- $register_urlをコピーするボタン --}}
                     <div class="mt-4">
                         <x-input-label for="register_url" :value="__('ユーザー登録用URL')" />
                         <div class="flex">
-                            <x-text-input id="register_url" class="block mt-1 w-full" type="text" name="register_url"
-                                :value="$register_url" required autofocus autocomplete="register_url" readonly />
-                            <x-primary-button class="ml-3" onclick="copyToClipboard()">
+                            <x-text-input id="register_url" class="block mt-1 w-10/12" type="text"
+                                name="register_url" :value="$register_url" required autofocus autocomplete="register_url"
+                                readonly />
+                            <x-primary-button class="ml-5" onclick="copyToClipboard()">
                                 {{ __('コピー') }}
                             </x-primary-button>
                         </div>
                     </div>
 
+                    <div class="mt-4">
+                        <div class="my-2 font-bold">管理データ</div>
+                    </div>
+
+                    <table class="table-auto">
+                        <thead>
+                            <tr class="mx-2">
+                                <th class="w-6/12">名前</th>
+                                <th class="w-6/12">メールアドレス</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (\App\Models\User::where('admin_id', Auth::guard('admin')->id())->get() as $user)
+                                <tr>
+                                    <td class="mx-2"> <a
+                                            href="{{ route('admin.result.show', ['userId' => $user->id]) }}">
+                                            {{ $user->name }}</a></td>
+                                    <td><a href="{{ route('admin.result.show', ['userId' => $user->id]) }}">
+                                            {{ $user->email }}</a></td>
+                            @endforeach
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
