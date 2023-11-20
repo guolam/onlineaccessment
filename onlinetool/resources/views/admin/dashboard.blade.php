@@ -38,6 +38,7 @@
                                 <th class="py-2 px-4"></th>
                                 <th class="py-2 px-4">名前</th>
                                 <th class="py-2 px-4">メールアドレス</th>
+                                <th class="py-2 px-4">作成日時</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,9 +53,10 @@
                                             class=" underline underline-offset-2 justify-center hover:underline hover:text-blue-500">
                                             {{ $user->name }}</a>
                                     </td>
-                                    <td class="text-center py-2 px-4 text-center">
+                                    <td class="text-center py-2 px-4">
                                         {{ $user->email }}
                                     </td>
+                                    <td class="text-center py-2 px-4">{{ $user->created_at }}</td>
                             @endforeach
                             </tr>
                         </tbody>

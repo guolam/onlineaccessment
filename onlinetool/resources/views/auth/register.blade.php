@@ -14,19 +14,26 @@
         </script>
         <div class="my-5 ml-12 mr-12">
             <div class="bg-gradient-to-r from-blue-200 to-blue-100 p-4 rounded-lg shadow-md">
-                <p class="text-blue-800 text-sm">
+                <p class="text-blue-800 text-sm mb-4">
                     こちらのフォームよりご登録ください。<br>
                     登録すると診断結果が保存され、<br>
-                    いつでもご確認できます。
+                    いつでもご確認できます。</p>
+                <p class="text-blue-800 text-sm font-semibold mb-2">
+                    そして、仕様上パスワードの再発行はできませんので、必ずご使用されたメールアドレスとパスワードを控えてください。
                 </p>
+                <input type="checkbox"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">確認済み
+                </label>
+
             </div>
         </div>
 
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('お名前')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required
-                autofocus autocomplete="name" />
+            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
+                required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
